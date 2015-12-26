@@ -53,6 +53,7 @@ runServer/
 .settings/
 libs/
 bin/
+eclipse/
 .gradle/
 .settings/
 .classpath
