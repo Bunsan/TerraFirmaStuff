@@ -1,0 +1,21 @@
+{
+	"modListVersion": 0.1.0,
+	"modList": [{
+	    "modid": "terrafirmastuff",
+        "name": "TerraFirmaStuff",
+        "description": "Adding Extra Stuff to TFC for better compatibility.",
+    "version": "${mod_version}",
+    "mcversion": "${minecraft_version}",
+        "url" : "https://github.com/Bunsan/TerraFirmaStuff",
+        "updateUrl": "",
+        "authorList": [ "Bunsan", "AnodeCathode" ],
+        "credits": "",
+        "logoFile": "",
+        "screenshots": [  ],
+        "parent": "",
+        "requiredMods": [],
+        "dependencies": [],
+        "dependants": [],
+        "useDependencyInformation": "true"
+    }]
+}
