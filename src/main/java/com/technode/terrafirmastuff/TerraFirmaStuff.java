@@ -1,8 +1,10 @@
 package com.technode.terrafirmastuff;
 
+import com.technode.terrafirmastuff.core.Recipes;
 import com.technode.terrafirmastuff.core.proxy.IProxy;
 import com.technode.terrafirmastuff.core.ModDetails;
-import com.technode.terrafirmastuff.core.handler.ConfigurationHandler;
+import com.technode.terrafirmastuff.core.reference.ItemReferences;
+import com.technode.terrafirmastuff.handler.ConfigurationHandler;
 import com.technode.terrafirmastuff.core.utility.LogHelper;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -33,12 +35,20 @@ public class TerraFirmaStuff
         ConfigurationHandler.init(e.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("Pre Initialization Complete");
+
+        ItemReferences.itemReferences();
     }
 
     @EventHandler
     public void initialize(FMLInitializationEvent e)
     {
         LogHelper.info("Initialization Complete");
+
+        // Register Crafting Handler
+        FMLCommonHandler.instance().bus().register(new com.technode.terrafirmastuff.handler.CraftingHandler());
+        FMLCommonHandler.instance().bus().register(instance);
+
+        Recipes.registerRecipes();
     }
 
     @EventHandler

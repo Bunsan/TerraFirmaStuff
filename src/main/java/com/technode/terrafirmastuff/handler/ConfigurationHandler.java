@@ -1,4 +1,4 @@
-package com.technode.terrafirmastuff.core.handler;
+package com.technode.terrafirmastuff.handler;
 
 import com.technode.terrafirmastuff.core.ModDetails;
 import cpw.mods.fml.client.event.ConfigChangedEvent;

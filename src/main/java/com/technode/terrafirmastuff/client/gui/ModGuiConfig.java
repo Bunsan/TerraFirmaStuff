@@ -1,7 +1,7 @@
 package com.technode.terrafirmastuff.client.gui;
 
 import com.technode.terrafirmastuff.core.ModDetails;
-import com.technode.terrafirmastuff.core.handler.ConfigurationHandler;
+import com.technode.terrafirmastuff.handler.ConfigurationHandler;
 import cpw.mods.fml.client.config.GuiConfig;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;

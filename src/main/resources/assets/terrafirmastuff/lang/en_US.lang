@@ -1,0 +1,57 @@
+#en_US
+#This is the Main language configuration file
+#
+#If you want to color code the text then I recommend you visit http://www.minecraftwiki.net/wiki/Formatting_codes#Color_codes
+#To create the § symbol which is used for assigning a color to the following text press Alt + 21 on Windows. For other OSes, view the above link.
+#This file needs to be UTF-8 encoded to work with MC 1.7+
+
+#== Nugget ==
+
+item.MetalNugget.Bismuth.name=Bismuth Nugget
+item.MetalNugget.Bismuth Bronze.name=Bismuth Bronze Nugget
+item.MetalNugget.Black Bronze.name=Black Bronze Nugget
+item.MetalNugget.Black Steel.name=Black Steel Nugget
+item.MetalNugget.Blue Steel.name=Blue Steel Nugget
+item.MetalNugget.Brass.name=Brass Nugget
+item.MetalNugget.Bronze.name=Bronze Nugget
+item.MetalNugget.Copper.name=Copper Nugget
+item.MetalNugget.Gold.name=Gold Nugget
+item.MetalNugget.Wrought Iron.name=Wrought Iron Nugget
+item.MetalNugget.Lead.name=Lead Nugget
+item.MetalNugget.Nickel.name=Nickel Nugget
+item.MetalNugget.Pig Iron.name=Pig Iron Nugget
+item.MetalNugget.Platinum.name=Platinum Nugget
+item.MetalNugget.Red Steel.name=Red Steel Nugget
+item.MetalNugget.Rose Gold.name=Rose Gold Nugget
+item.MetalNugget.Silver.name=Silver Nugget
+item.MetalNugget.Steel.name=Steel Nugget
+item.MetalNugget.Sterling Silver.name=Sterling Silver Nugget
+item.MetalNugget.Tin.name=Tin Nugget
+item.MetalNugget.Zinc.name=Zinc Nugget
+
+#== Dust ==
+
+item.MetalDust.Bismuth.name=Bismuth Dust
+item.MetalDust.Bismuth Bronze.name=Bismuth Bronze Dust
+item.MetalDust.Black Bronze.name=Black Bronze Dust
+item.MetalDust.Black Steel.name=Black Steel Dust
+item.MetalDust.Blue Steel.name=Blue Steel Dust
+item.MetalDust.Brass.name=Brass Dust
+item.MetalDust.Bronze.name=Bronze Dust
+item.MetalDust.Copper.name=Copper Dust
+item.MetalDust.Gold.name=Gold Dust
+item.MetalDust.Wrought Iron.name=Wrought Iron Dust
+item.MetalDust.Lead.name=Lead Dust
+item.MetalDust.Nickel.name=Nickel Dust
+item.MetalDust.Pig Iron.name=Pig Iron Dust
+item.MetalDust.Platinum.name=Platinum Dust
+item.MetalDust.Red Steel.name=Red Steel Dust
+item.MetalDust.Rose Gold.name=Rose Gold Dust
+item.MetalDust.Silver.name=Silver Dust
+item.MetalDust.Steel.name=Steel Dust
+item.MetalDust.Sterling Silver.name=Sterling Silver Dust
+item.MetalDust.Tin.name=Tin Dust
+item.MetalDust.Zinc.name=Zinc Dust
+
+#== Creative Tabs ==
+itemGroup.terrafirmastuff=TerraFirmaStuff

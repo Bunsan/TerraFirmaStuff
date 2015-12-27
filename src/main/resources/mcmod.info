@@ -13,8 +13,8 @@
         "logoFile": "",
         "screenshots": [  ],
         "parent": "",
-        "requiredMods": [],
-        "dependencies": [],
+        "requiredMods": ["terrafirmacraft"],
+        "dependencies": ["terrafirmacraft"],
         "dependants": [],
         "useDependencyInformation": "true"
     }]
