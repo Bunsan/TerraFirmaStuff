@@ -1,8 +1,9 @@
 package com.technode.terrafirmastuff;
 
 import com.technode.terrafirmastuff.core.Recipes;
-import com.technode.terrafirmastuff.core.proxy.IProxy;
 import com.technode.terrafirmastuff.core.ModDetails;
+import com.technode.terrafirmastuff.core.proxy.CommonProxy;
+import com.technode.terrafirmastuff.core.reference.BlockReferences;
 import com.technode.terrafirmastuff.core.reference.ItemReferences;
 import com.technode.terrafirmastuff.handler.ConfigurationHandler;
 import com.technode.terrafirmastuff.core.utility.LogHelper;
@@ -16,6 +17,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = ModDetails.ModID, name = ModDetails.ModName, version = ModDetails.ModVersion, guiFactory = ModDetails.GUI_FACTORY_CLASS)
+
 public class TerraFirmaStuff
 {
     @Instance(ModDetails.ModID)
@@ -24,7 +26,7 @@ public class TerraFirmaStuff
     //public static final String AssetPathGui = "textures/gui";
 
     @SidedProxy(clientSide = ModDetails.CLIENT_PROXY_CLASS, serverSide = ModDetails.SERVER_PROXY_CLASS)
-    public static IProxy proxy;
+    public static CommonProxy proxy;
 
  //   public File getMinecraftDirectory() { return proxy.getMinecraftDirectory(); }
 
@@ -37,6 +39,7 @@ public class TerraFirmaStuff
         LogHelper.info("Pre Initialization Complete");
 
         ItemReferences.itemReferences();
+        BlockReferences.blockReferences();
     }
 
     @EventHandler
@@ -49,6 +52,8 @@ public class TerraFirmaStuff
         FMLCommonHandler.instance().bus().register(instance);
 
         Recipes.registerRecipes();
+
+        proxy.registerChiselModes();
     }
 
     @EventHandler

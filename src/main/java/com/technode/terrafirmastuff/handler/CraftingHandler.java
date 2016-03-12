@@ -1,7 +1,7 @@
 package com.technode.terrafirmastuff.handler;
 
 
-import com.technode.terrafirmastuff.core.TFSItems;
+import com.technode.terrafirmastuff.core.ModItems;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
@@ -28,10 +28,10 @@ public class CraftingHandler
 
             if (iinventory != null) {
                 // Tool Damaging
-                if (item == TFSItems.smallMetalChunk) {
-                    List<ItemStack> chisels = OreDictionary.getOres("itemChisel", false);
-                    handleItem(player, iinventory, chisels);
-                }
+              //  if (item == ModItems.smallMetalChunk) {
+                //    List<ItemStack> chisels = OreDictionary.getOres("itemChisel", false);
+                 //   handleItem(player, iinventory, chisels);
+                //}
             }
         }
 

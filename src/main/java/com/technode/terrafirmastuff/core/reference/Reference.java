@@ -23,4 +23,15 @@ public class Reference {
     {
         return FMLCommonHandler.instance().getEffectiveSide() == Side.CLIENT && Keyboard.isKeyDown(Keyboard.KEY_LCONTROL);
     }
+
+    // Common references for meta names, etc.
+
+    public static final String[] COLOURS = {
+            "White", "Orange", "Magenta", "LightBlue", "Yellow", "Lime", "Pink", "Gray", "Silver", "Cyan", "Purple",
+            "Blue", "Brown", "Green", "Red", "Black", "Base"
+    };
+
+    public static final String[] CLAY_STYLES = {
+            "Baked", "Paver", "Circle", "Brick", "Tile", "Pillar", "Chiseled"
+    };
 }

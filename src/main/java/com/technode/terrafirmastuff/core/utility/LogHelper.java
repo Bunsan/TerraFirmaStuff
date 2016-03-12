@@ -3,6 +3,8 @@ package com.technode.terrafirmastuff.core.utility;
 import com.technode.terrafirmastuff.core.ModDetails;
 import cpw.mods.fml.common.FMLLog;
 import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class LogHelper
 {
@@ -26,5 +28,7 @@ public class LogHelper
     public static void trace(Object object) { log(Level.TRACE, object); }
 
     public static void warn(Object object) { log(Level.WARN, object); }
+
+    public static final Logger DBLOG = LogManager.getLogger(ModDetails.ModName);
 
 }
