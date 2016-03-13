@@ -21,16 +21,12 @@ public class BlockReferences extends ModBlocks
         clayStainedBrick2 = new BlockClayBrick2(Material.rock) {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayBrick2");
         clayStainedCircle = new BlockClayCircle(Material.rock) {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayCircle");
         clayStainedCircle2 = new BlockClayCircle2(Material.rock) {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayCircle2");
-        clayStainedChiseledVert = new BlockClayChiseledVert() {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayChiseledVert");
-        clayStainedChiseledVert2 = new BlockClayChiseledVert2() {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayChiseledVert2");
-        clayStainedChiseledHoriz = new BlockClayChiseledHoriz(0) {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayChiseledHoriz");
-        clayStainedChiseledHoriz2 = new BlockClayChiseledHoriz(8) {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayChiseledHoriz2");
-        clayStainedChiseledHoriz3 = new BlockClayChiseledHoriz2(0) {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayChiseledHoriz3");
-        clayStainedPillarVert = new BlockClayPillarVert() {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayPillarVert");
-        clayStainedPillarVert2 = new BlockClayPillarVert2() {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayPillarVert2");
-        clayStainedPillarHoriz = new BlockClayPillarHoriz(0) {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayPillarHoriz");
-        clayStainedPillarHoriz2 = new BlockClayPillarHoriz(8) {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayPillarHoriz2");
-        clayStainedPillarHoriz3 = new BlockClayPillarHoriz2(0) {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayPillarHoriz3");
+        clayStainedChiseled = new BlockClayChiseled() {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayChiseled");
+        clayStainedChiseled2 = new BlockClayChiseled2() {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayChiseled2");
+        clayStainedPillar = new BlockClayPillar() {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayPillar");
+        clayStainedPillar2 = new BlockClayPillar2() {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayPillar2");
+        clayStainedPillar3 = new BlockClayPillar3() {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayPillar3");
+        clayStainedPillar4 = new BlockClayPillar4() {}.setHardness(16F).setResistance(10F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayPillar4");
 
         registerBlocks();
 

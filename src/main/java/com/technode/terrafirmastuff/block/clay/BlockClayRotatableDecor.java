@@ -17,6 +17,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 import java.util.List;
+import java.util.Random;
 
 public abstract class BlockClayRotatableDecor extends BlockRotatableBase
 {
@@ -40,21 +41,17 @@ public abstract class BlockClayRotatableDecor extends BlockRotatableBase
         for(int i = 0; i < names.length; i++)
             list.add(new ItemStack(this,1,i));
     }
-
+    public Item getItemDropped(int i, Random r, int j)
+    {
+        return Item.getItemFromBlock(this);
+    }
     /*
      * Mapping from metadata value to damage value
      */
     @Override
     public int damageDropped(int meta)
     {
-        return meta;
-    }
-
-    @SideOnly(Side.CLIENT)
-    @Override
-    public IIcon getIcon(int side, int meta)
-    {
-        return icons[meta];
+        return meta &3;
     }
 
     /**

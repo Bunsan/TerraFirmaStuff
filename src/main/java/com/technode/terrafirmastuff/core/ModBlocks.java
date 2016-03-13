@@ -17,16 +17,12 @@ public class ModBlocks
     public static Block clayStainedBrick2;
     public static Block clayStainedCircle;
     public static Block clayStainedCircle2;
-    public static Block clayStainedChiseledVert;
-    public static Block clayStainedChiseledVert2;
-    public static Block clayStainedChiseledHoriz;
-    public static Block clayStainedChiseledHoriz2;
-    public static Block clayStainedChiseledHoriz3;
-    public static Block clayStainedPillarVert;
-    public static Block clayStainedPillarVert2;
-    public static Block clayStainedPillarHoriz;
-    public static Block clayStainedPillarHoriz2;
-    public static Block clayStainedPillarHoriz3;
+    public static Block clayStainedChiseled;
+    public static Block clayStainedChiseled2;
+    public static Block clayStainedPillar;
+    public static Block clayStainedPillar2;
+    public static Block clayStainedPillar3;
+    public static Block clayStainedPillar4;
 
     public static void registerBlocks()
     {
@@ -41,15 +37,12 @@ public class ModBlocks
         GameRegistry.registerBlock(clayStainedBrick2, ItemBlockClay2.class, "clayStainedBrick2");
         GameRegistry.registerBlock(clayStainedCircle, ItemBlockClay.class, "clayStainedCircle");
         GameRegistry.registerBlock(clayStainedCircle2, ItemBlockClay2.class, "clayStainedCircle2");
-        GameRegistry.registerBlock(clayStainedChiseledVert, ItemBlockClayChiseledVert.class, "clayStainedChiseledVert");
-        GameRegistry.registerBlock(clayStainedChiseledVert2, ItemBlockClayChiseledVert2.class, "clayStainedChiseledVert2");
-        GameRegistry.registerBlock(clayStainedChiseledHoriz, ItemBlockClayChiseledHoriz.class, "clayStainedChiseledHoriz");
-        GameRegistry.registerBlock(clayStainedChiseledHoriz2, ItemBlockClayChiseledHoriz2.class, "clayStainedChiseledHoriz2");
-        GameRegistry.registerBlock(clayStainedChiseledHoriz3, ItemBlockClayChiseledHoriz3.class, "clayStainedChiseledHoriz3");
-        GameRegistry.registerBlock(clayStainedPillarVert, ItemBlockClayPillarVert.class, "clayStainedPillarVert");
-        GameRegistry.registerBlock(clayStainedPillarVert2, ItemBlockClayPillarVert2.class, "clayStainedPillarVert2");
-        GameRegistry.registerBlock(clayStainedPillarHoriz, ItemBlockClayPillarHoriz.class, "clayStainedPillarHoriz");
-        GameRegistry.registerBlock(clayStainedPillarHoriz2, ItemBlockClayPillarHoriz2.class, "clayStainedPillarHoriz2");
-        GameRegistry.registerBlock(clayStainedPillarHoriz3, ItemBlockClayPillarHoriz3.class, "clayStainedPillarHoriz3");
+        GameRegistry.registerBlock(clayStainedChiseled, ItemBlockClayChiseled.class, "clayStainedChiseled");
+        GameRegistry.registerBlock(clayStainedChiseled2, ItemBlockClayChiseled2.class, "clayStainedChiseled2");
+        GameRegistry.registerBlock(clayStainedPillar, ItemBlockClayPillar.class, "clayStainedPillar");
+        GameRegistry.registerBlock(clayStainedPillar2, ItemBlockClayPillar2.class, "clayStainedPillar2");
+        GameRegistry.registerBlock(clayStainedPillar3, ItemBlockClayPillar3.class, "clayStainedPillar3");
+        GameRegistry.registerBlock(clayStainedPillar4, ItemBlockClayPillar4.class, "clayStainedPillar4");
+
     }
 }

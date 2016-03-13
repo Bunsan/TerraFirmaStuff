@@ -47,5 +47,31 @@ public abstract class BlockRotatableBase extends BlockRotatedPillar
         super.harvestBlock(world, player, x, y, z, meta);
         TFC_Core.addPlayerExhaustion(player, 0.001f);
     }
+    /**
+     * Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata
+     */
+    public int onBlockPlaced(World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ, int meta)
+    {
+        int shiftedMeta = meta & 3;
+        byte b0 = 0;
+
+        switch (side)
+        {
+            case 0:
+            case 1:
+                b0 = 0;
+                break;
+            case 2:
+            case 3:
+                b0 = 8;
+                break;
+            case 4:
+            case 5:
+                b0 = 4;
+        }
+
+        return shiftedMeta | b0;
+    }
 }
+
 

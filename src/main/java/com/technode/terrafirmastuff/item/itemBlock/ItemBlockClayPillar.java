@@ -12,7 +12,7 @@ public class ItemBlockClayPillar extends ItemBlockBase
     public ItemBlockClayPillar(Block b)
     {
         super(b);
-        metaNames = new String[3];
-        System.arraycopy(Reference.COLOURS, 0, metaNames, 0, 3);
+        metaNames = new String[4];
+        System.arraycopy(Reference.COLOURS, 0, metaNames, 0, 4);
     }
 }

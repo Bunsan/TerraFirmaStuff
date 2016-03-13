@@ -28,8 +28,8 @@ public class Recipes
                 GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.clayStainedCircle, 1, i), "CCC", "CDC", "CCC", 'C', new ItemStack(ModBlocks.clayStainedCircle2, 1, 0), 'D', "dye" + colour[i]));
                 GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.clayStainedBrick, 1, i), "CCC", "CDC", "CCC", 'C', new ItemStack(ModBlocks.clayStainedBrick2, 1, 0), 'D', "dye" + colour[i]));
                 GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.clayStainedTile, 1, i), "CCC", "CDC", "CCC", 'C', new ItemStack(ModBlocks.clayStainedTile2, 1, 0), 'D', "dye" + colour[i]));
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.clayStainedChiseledVert, 1, i), "CCC", "CDC", "CCC", 'C', new ItemStack(ModBlocks.clayStainedChiseledVert2, 1, 0), 'D', "dye" + colour[i]));
-                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.clayStainedPillarVert, 1, i), "CCC", "CDC", "CCC", 'C', new ItemStack(ModBlocks.clayStainedPillarVert2, 1, 0), 'D', "dye" + colour[i]));
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.clayStainedChiseled, 1, i), "CCC", "CDC", "CCC", 'C', new ItemStack(ModBlocks.clayStainedChiseled2, 1, 0), 'D', "dye" + colour[i]));
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.clayStainedPillar, 1, i), "CCC", "CDC", "CCC", 'C', new ItemStack(ModBlocks.clayStainedPillar2, 1, 0), 'D', "dye" + colour[i]));
             }
         }
     }
