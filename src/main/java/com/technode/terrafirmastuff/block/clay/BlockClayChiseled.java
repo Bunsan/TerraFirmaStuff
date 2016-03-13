@@ -9,9 +9,9 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
-public class BlockClayChiseledVert extends BlockClayDecor {
+public class BlockClayChiseled extends BlockClayRotatableDecor {
 
-    public BlockClayChiseledVert()
+    public BlockClayChiseled()
     {
         super(Material.rock);
         this.setCreativeTab(CreativeTab.TFS_TAB);
@@ -21,15 +21,28 @@ public class BlockClayChiseledVert extends BlockClayDecor {
         this.topIcons = new IIcon[names.length];
         this.rotatedSideIcons = new IIcon[names.length];
     }
-    @Override
+    /**
+     * Gets the block's texture. Args: side, meta
+     */
+
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int side, int meta)
+    @Override
+    protected IIcon getSideIcon(int meta)
     {
-        if (side == 0 || side == 1)
-            return topIcons[meta];
-        return sideIcons[meta];
+        if ((meta & 12) == 0) {
+            return this.rotatedSideIcons[meta];
+        } else if ((meta & 12) == 8) {
+            return this.rotatedSideIcons[meta];
+        }
+        return this.sideIcons[meta];
     }
 
+    @SideOnly(Side.CLIENT)
+    @Override
+    protected IIcon getTopIcon(int meta)
+    {
+        return this.topIcons[meta];
+    }
     @Override
     public void registerBlockIcons(IIconRegister reg)
     {

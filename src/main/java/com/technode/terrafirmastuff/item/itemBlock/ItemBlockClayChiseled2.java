@@ -5,15 +5,13 @@ import com.technode.terrafirmastuff.core.utility.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockClayChiseledHoriz3 extends ItemBlockBase
+public class ItemBlockClayChiseled2 extends ItemBlockClayChiseled
 {
-    public ItemBlockClayChiseledHoriz3(Block b)
+    public ItemBlockClayChiseled2(Block b)
     {
         super(b);
-        int size = Reference.COLOURS.length - 16;
-        metaNames = new String[size * 2];
-        System.arraycopy(Reference.COLOURS, 16, metaNames, 0, size);
-        System.arraycopy(Reference.COLOURS, 16, metaNames, size, size);
+        metaNames = new String[Reference.COLOURS.length-16];
+        System.arraycopy(Reference.COLOURS, 16, metaNames, 0, Reference.COLOURS.length-16);
     }
 
     @Override

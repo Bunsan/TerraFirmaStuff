@@ -10,30 +10,45 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-public class BlockClayPillarVert extends BlockClayDecor {
+import java.util.List;
 
-    public BlockClayPillarVert()
+public class BlockClayPillar extends BlockClayRotatableDecor {
+
+    public BlockClayPillar()
     {
         super(Material.rock);
         this.setCreativeTab(CreativeTab.TFS_TAB);
-        this.names = new String[16];
-        System.arraycopy(Reference.COLOURS, 0, names, 0, 16);
+        this.names = new String[3];
+        System.arraycopy(Reference.COLOURS, 0, names, 0, 3);
         this.sideIcons = new IIcon[names.length];
         this.topIcons = new IIcon[names.length];
         this.rotatedSideIcons = new IIcon[names.length];
     }
-    @Override
+
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int side, int meta)
+    @Override
+    protected IIcon getSideIcon(int meta)
     {
-        if (side == 0 || side == 1)
-            return topIcons[meta];
-        return sideIcons[meta];
+        if ((meta & 12) == 0) {
+            return this.sideIcons[meta];
+        } else if ((meta & 12) == 8) {
+            return this.sideIcons[meta];
+        }
+        return this.rotatedSideIcons[meta];
+    }
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    protected IIcon getTopIcon(int meta)
+    {
+        return this.topIcons[meta];
     }
 
     @Override

@@ -1,14 +1,11 @@
 package com.technode.terrafirmastuff.block.clay;
 
-import com.technode.terrafirmastuff.core.reference.CreativeTab;
 import com.technode.terrafirmastuff.core.reference.Reference;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.util.IIcon;
 
-public class BlockClayChiseledVert2 extends BlockClayChiseledVert
+public class BlockClayChiseled2 extends BlockClayChiseled
 {
-    public BlockClayChiseledVert2()
+    public BlockClayChiseled2()
     {
         super();
         //this.setCreativeTab(CreativeTab.TFS_TAB);
@@ -23,16 +20,5 @@ public class BlockClayChiseledVert2 extends BlockClayChiseledVert
     public int damageDropped(int meta)
     {
         return meta += 16;
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int side, int meta)
-    {
-        if (meta >= names.length)
-            meta = 0;
-        if (side == 0 || side == 1)
-            return topIcons[meta];
-        return sideIcons[meta];
     }
 }
