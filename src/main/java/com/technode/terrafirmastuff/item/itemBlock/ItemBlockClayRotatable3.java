@@ -7,12 +7,12 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ItemBlockClayChiseled extends ItemBlockBase
+public class ItemBlockClayRotatable3 extends ItemBlockBase
 {
-    public ItemBlockClayChiseled(Block b)
+    public ItemBlockClayRotatable3(Block b)
     {
         super(b);
-        metaNames = new String[Reference.COLOURS.length];
-        System.arraycopy(Reference.COLOURS, 0, metaNames, 0, Reference.COLOURS.length);
+        metaNames = new String[4];
+        System.arraycopy(Reference.COLOURS, 8, metaNames, 0, 4);
     }
 }

@@ -23,7 +23,7 @@ public class BlockClayRaw extends BlockClayDecor
     @Override
     public void registerBlockIcons(IIconRegister iconRegisterer)
     {
-            icons[0] = iconRegisterer.registerIcon(ModDetails.ModID + ":" + "clay/"+"blockClayRaw");
+            icons[0] = iconRegisterer.registerIcon(ModDetails.ModID + ":" + "clay/blockClayRaw");
     }
     @Override
     public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List list)

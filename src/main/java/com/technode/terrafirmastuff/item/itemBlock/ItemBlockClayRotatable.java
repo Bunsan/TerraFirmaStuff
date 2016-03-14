@@ -7,9 +7,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ItemBlockClayPillar extends ItemBlockBase
+public class ItemBlockClayRotatable extends ItemBlockBase
 {
-    public ItemBlockClayPillar(Block b)
+    public ItemBlockClayRotatable(Block b)
     {
         super(b);
         metaNames = new String[4];

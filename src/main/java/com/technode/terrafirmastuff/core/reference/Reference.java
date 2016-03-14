@@ -27,7 +27,7 @@ public class Reference {
     // Common references for meta names, etc.
 
     public static final String[] COLOURS = {
-            "White", "Orange", "Magenta", "LightBlue", "Yellow", "Lime", "Pink", "Gray", "Silver", "Cyan", "Purple",
+            "White", "Orange", "Magenta", "LightBlue", "Yellow", "Lime", "Pink", "Gray", "LightGray", "Cyan", "Purple",
             "Blue", "Brown", "Green", "Red", "Black", "Base"
     };
 

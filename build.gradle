@@ -1,8 +1,10 @@
+import java.sql.Wrapper
+
 buildscript {
     repositories {
         mavenCentral()
         maven {
-            name = "Minecraft Forge"
+            name = "forge"
             url = "http://files.minecraftforge.net/maven"
         }
         maven {
@@ -16,11 +18,10 @@ buildscript {
 }
 
 // define the properties file
-
 ext.configFile = file "build.prop"
 
 configFile.withReader {
-    //read config. it shall from now on be referenced as simply config or as project.config
+    // read config.  it shall from now on be referenced as simply config or as project.config
     def prop = new Properties()
     prop.load(it)
     project.ext.config = new ConfigSlurper().parse prop
@@ -29,28 +30,23 @@ allprojects {
     apply plugin: 'java'
     apply plugin: 'forge'
     apply plugin: 'maven'
-    group = config.group_name
-    version = config.mod.version
-    archivesBaseName = "${config.minecraft_version}-${config.mod_id}"
+
+    version = config.mod_version
+    group = config.group_name // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+    archivesBaseName = "[${config.minecraft_version}]${config.mod_id}"
 
     minecraft {
-        version = config.minecraft_version + "-" + config.forge_version + "-" + config.minecraft_version
-        if(file('../run').exists()) {
-            runDir = "../run"
-        } else {
-            runDir = "eclipse"
-        }
+        version = config.minecraft_version + "-" + config.forge_version
+        runDir = "eclipse"
     }
 }
 
 repositories {
-    maven {
-        // The repo from which to get waila
+    maven { // The repo from which to get waila
         name "Mobius Repo"
         url "http://mobiusstrip.eu/maven"
     }
-    maven {
-        // the repo from which to get NEI and stuff
+    maven { // the repo from which to get NEI and stuff
         name 'CB Repo'
         url "http://chickenbones.net/maven/"
     }
@@ -68,12 +64,7 @@ dependencies {
 task deobfJar(type: Jar) {
     from sourceSets.main.output
     appendix = 'deobf'
-    manifest.attributes(
-            'FMLCorePlugin': 'TechNodefirmacraft.TNFCASMLoadingPlugin',
-            'FMLCorePluginContainsFMLMod': 'true',
-    )
 }
-
 //creates a jar containing only the src
 task sourceJar(type: Jar) {
     from sourceSets.main.allSource
@@ -82,38 +73,26 @@ task sourceJar(type: Jar) {
 
 tasks.build.dependsOn('sourceJar', 'deobfJar')
 
-dependencies {
-    // Copy "[1.7.10]TerraFirmaCraft-deobf-0.79.0.jar" file into the ./libs directory
+processResources {
+//First we just copy in the mcmod.info file
+    from(sourceSets.main.resources.srcDirs) {
+        include '**/*.info'
+        include '**/*.prop'
+
+        // replaces
+        expand ([
+                'mod_version': project.config.mod_version,
+                'minecraft_version': project.config.minecraft_version,
+        ])
+    }
+    // copy everything else, thats we didnt do before
+    from(sourceSets.main.resources.srcDirs) {
+        exclude '**/*.info'
+        exclude '**/*.prop'
+    }
 }
 
-processResources
-// First we just copy in the mcmod.info file
-from(sourceSets.main.resources.srcDirs) {
-    include '**/*.info'
-    include '**/*.prop'
-
-    // replaces
-    expand ([
-            'mod_version': project.config.mod_version,
-            'tfc_version': project.config.tfc_version,
-            'minecraft_version': project.config.minecraft_version,
-    ])
-}
-// copy everything else, that we didn't copy before
-from(sourceSets.main.resources.srcDirs) {
-    exclude '**/*.info'
-    exclude '**/*.prop'
-}
-}
-clean {
-    delete "bin"
-}
 jar {
-    manifest.attributes(
-            'FMLCorePlugin': 'TechNodefirmacraft.TNFCASMLoadingPlugin',
-            'FMLCorePluginContainsFMLMod': 'true',
-    )
 }
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.2.1'
-}
+
+idea { module { inheritOutputDirs = true } }

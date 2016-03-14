@@ -1,5 +1,6 @@
 package com.technode.terrafirmastuff;
 
+import com.technode.terrafirmastuff.core.ItemHeat;
 import com.technode.terrafirmastuff.core.Recipes;
 import com.technode.terrafirmastuff.core.ModDetails;
 import com.technode.terrafirmastuff.core.proxy.CommonProxy;
@@ -54,6 +55,8 @@ public class TerraFirmaStuff
         Recipes.registerRecipes();
 
         proxy.registerChiselModes();
+
+        ItemHeat.setupItemHeat();
     }
 
     @EventHandler
