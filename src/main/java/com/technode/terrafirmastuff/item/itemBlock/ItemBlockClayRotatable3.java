@@ -1,11 +1,8 @@
 package com.technode.terrafirmastuff.item.itemBlock;
 
-import com.technode.terrafirmastuff.core.ModBlocks;
 import com.technode.terrafirmastuff.core.reference.Reference;
 import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+
 
 public class ItemBlockClayRotatable3 extends ItemBlockBase
 {

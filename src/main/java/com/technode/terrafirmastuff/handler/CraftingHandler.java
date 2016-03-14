@@ -1,11 +1,9 @@
 package com.technode.terrafirmastuff.handler;
 
 
-import com.technode.terrafirmastuff.core.ModItems;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
-import net.minecraftforge.oredict.OreDictionary;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;

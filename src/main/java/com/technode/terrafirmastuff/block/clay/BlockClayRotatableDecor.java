@@ -2,12 +2,10 @@ package com.technode.terrafirmastuff.block.clay;
 
 import com.bioxx.tfc.Items.Tools.ItemHammer;
 import com.bioxx.tfc.api.Tools.IToolChisel;
-import com.technode.terrafirmastuff.block.BlockBase;
 import com.technode.terrafirmastuff.block.BlockRotatableBase;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockLog;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
