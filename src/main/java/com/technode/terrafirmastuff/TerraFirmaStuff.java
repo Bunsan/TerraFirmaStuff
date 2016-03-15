@@ -57,6 +57,8 @@ public class TerraFirmaStuff
         proxy.registerChiselModes();
 
         ItemHeat.setupItemHeat();
+
+        proxy.hideNEIItems();
     }
 
     @EventHandler

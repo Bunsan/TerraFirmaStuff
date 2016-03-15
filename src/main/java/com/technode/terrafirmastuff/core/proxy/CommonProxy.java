@@ -15,4 +15,5 @@ public abstract class CommonProxy
         ChiselManager.getInstance().addChiselMode(new ChiselMode_Pillar("Pillar"));
 
     }
+    public void hideNEIItems() {}
 }
