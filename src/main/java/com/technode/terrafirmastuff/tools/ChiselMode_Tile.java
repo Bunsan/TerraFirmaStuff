@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 
 public class ChiselMode_Tile extends ChiselMode {
     //private static String name;
-    private static ResourceLocation resourcelocation = new ResourceLocation(ModDetails.ModID, "/textures/gui/chiselIcons.png");
+    private static ResourceLocation resourcelocation = new ResourceLocation(ModDetails.ModID, ModDetails.AssetPathGui + "icons.png");
     private static int textureU, textureV, div;
 
     public ChiselMode_Tile(String n) {
