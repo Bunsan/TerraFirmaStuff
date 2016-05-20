@@ -65,18 +65,20 @@ public class ChiselMode_Tile extends ChiselMode {
 
     @Override
     public boolean onUsedHandler(World world, EntityPlayer player, int x, int y, int z, Block id, int meta, int side, float hitX, float hitY, float hitZ) {
-
-        int hasChisel = hasChisel(player);
-        if (hasChisel >= 0) {
-            if (id == ModBlocks.clayStainedPaver || id == ModBlocks.clayStained || id == ModBlocks.clayStainedBrick) {
-                world.setBlock(x, y, z, ModBlocks.clayStainedTile, meta, 0x2);
+        if (world.getBlock(x, y, z) == ModBlocks.clayStainedPaver || world.getBlock(x, y, z) == ModBlocks.clayStainedPaver2 ||
+                world.getBlock(x, y, z) == ModBlocks.clayStainedBrick || world.getBlock(x, y, z) == ModBlocks.clayStainedBrick2 ||
+        world.getBlock(x, y, z) == ModBlocks.clayStained || world.getBlock(x, y, z) == ModBlocks.clayStained2) {
+            int hasChisel = hasChisel(player);
+            if (hasChisel >= 0) {
+                if (id == ModBlocks.clayStainedPaver || id == ModBlocks.clayStained || id == ModBlocks.clayStainedBrick) {
+                    world.setBlock(x, y, z, ModBlocks.clayStainedTile, meta, 0x2);
+                } else if (id == ModBlocks.clayStainedPaver2 || id == ModBlocks.clayStained2 || id == ModBlocks.clayStainedBrick2) {
+                    world.setBlock(x, y, z, ModBlocks.clayStainedTile2, meta, 0x2);
+                }
+                player.inventory.mainInventory[hasChisel].damageItem(1, player);
+                return true;
             }
-            else if (id == ModBlocks.clayStainedPaver2 || id == ModBlocks.clayStained2 || id == ModBlocks.clayStainedBrick2) {
-                world.setBlock(x, y, z, ModBlocks.clayStainedTile2, meta, 0x2);
-            }
-            player.inventory.mainInventory[hasChisel].damageItem(1, player);
         }
-
-        return true;
+        return false;
     }
 }

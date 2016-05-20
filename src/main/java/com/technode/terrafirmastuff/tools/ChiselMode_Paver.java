@@ -69,18 +69,18 @@ public class ChiselMode_Paver extends ChiselMode {
 
     @Override
     public boolean onUsedHandler(World world, EntityPlayer player, int x, int y, int z, Block id, int meta, int side, float hitX, float hitY, float hitZ){
-
-        int hasChisel = hasChisel(player);
-        if( hasChisel >= 0 ){
-            if(id == ModBlocks.clayStained) {
-                world.setBlock(x, y, z, ModBlocks.clayStainedPaver, meta, 0x2);
+        if (world.getBlock(x, y, z) == ModBlocks.clayStained || world.getBlock(x, y, z) == ModBlocks.clayStained2) {
+            int hasChisel = hasChisel(player);
+            if (hasChisel >= 0) {
+                if (id == ModBlocks.clayStained) {
+                    world.setBlock(x, y, z, ModBlocks.clayStainedPaver, meta, 0x2);
+                } else if (id == ModBlocks.clayStained2) {
+                    world.setBlock(x, y, z, ModBlocks.clayStainedPaver2, meta, 0x2);
+                }
+                player.inventory.mainInventory[hasChisel].damageItem(1, player);
+                return true;
             }
-            else if(id == ModBlocks.clayStained2) {
-                world.setBlock(x, y, z, ModBlocks.clayStainedPaver2, meta, 0x2);
-            }
-            player.inventory.mainInventory[hasChisel].damageItem(1, player);
         }
-
-        return true;
+        return false;
     }
 }

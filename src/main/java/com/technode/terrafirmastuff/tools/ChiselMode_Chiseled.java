@@ -70,115 +70,109 @@ public class ChiselMode_Chiseled extends ChiselMode {
     @Override
     public boolean onUsedHandler(World world, EntityPlayer player, int x, int y, int z, Block id, int meta, int side, float hitX, float hitY, float hitZ)
     {
-        int hasChisel = hasChisel(player);
-        if( hasChisel >= 0 ){
-            if(id == ModBlocks.clayStained) {
-                if (meta < 4) {
-                    int shiftedMeta = meta & 3;
-                    byte b0 = 0;
+        if (world.getBlock(x, y, z) == ModBlocks.clayStained || world.getBlock(x, y, z) == ModBlocks.clayStained2) {
 
-                    switch (side)
-                    {
-                        case 0:
-                        case 1:
-                            b0 = 0;
-                            break;
-                        case 2:
-                        case 3:
-                            b0 = 8;
-                            break;
-                        case 4:
-                        case 5:
-                            b0 = 4;
-                    }
-                    world.setBlock(x, y, z, ModBlocks.clayStainedChiseled, (shiftedMeta | b0), 0x2);
-                }
-                else if (meta < 8) {
-                    int shiftedMeta = meta & 3;
-                    byte b0 = 0;
+            int hasChisel = hasChisel(player);
+            if (hasChisel >= 0) {
+                if (id == ModBlocks.clayStained) {
+                    if (meta < 4) {
+                        int shiftedMeta = meta & 3;
+                        byte b0 = 0;
 
-                    switch (side)
-                    {
-                        case 0:
-                        case 1:
-                            b0 = 0;
-                            break;
-                        case 2:
-                        case 3:
-                            b0 = 8;
-                            break;
-                        case 4:
-                        case 5:
-                            b0 = 4;
-                    }
-                    world.setBlock(x, y, z, ModBlocks.clayStainedChiseled2, (shiftedMeta | b0), 0x2);
-                }
-                else if (meta < 12) {
-                    int shiftedMeta = meta & 3;
-                    byte b0 = 0;
+                        switch (side) {
+                            case 0:
+                            case 1:
+                                b0 = 0;
+                                break;
+                            case 2:
+                            case 3:
+                                b0 = 8;
+                                break;
+                            case 4:
+                            case 5:
+                                b0 = 4;
+                        }
+                        world.setBlock(x, y, z, ModBlocks.clayStainedChiseled, (shiftedMeta | b0), 0x2);
+                    } else if (meta < 8) {
+                        int shiftedMeta = meta & 3;
+                        byte b0 = 0;
 
-                    switch (side)
-                    {
-                        case 0:
-                        case 1:
-                            b0 = 0;
-                            break;
-                        case 2:
-                        case 3:
-                            b0 = 8;
-                            break;
-                        case 4:
-                        case 5:
-                            b0 = 4;
-                    }
-                    world.setBlock(x, y, z, ModBlocks.clayStainedChiseled3, (shiftedMeta | b0), 0x2);
-                }
-                else if (meta < 16) {
-                    int shiftedMeta = meta & 3;
-                    byte b0 = 0;
+                        switch (side) {
+                            case 0:
+                            case 1:
+                                b0 = 0;
+                                break;
+                            case 2:
+                            case 3:
+                                b0 = 8;
+                                break;
+                            case 4:
+                            case 5:
+                                b0 = 4;
+                        }
+                        world.setBlock(x, y, z, ModBlocks.clayStainedChiseled2, (shiftedMeta | b0), 0x2);
+                    } else if (meta < 12) {
+                        int shiftedMeta = meta & 3;
+                        byte b0 = 0;
 
-                    switch (side)
-                    {
-                        case 0:
-                        case 1:
-                            b0 = 0;
-                            break;
-                        case 2:
-                        case 3:
-                            b0 = 8;
-                            break;
-                        case 4:
-                        case 5:
-                            b0 = 4;
+                        switch (side) {
+                            case 0:
+                            case 1:
+                                b0 = 0;
+                                break;
+                            case 2:
+                            case 3:
+                                b0 = 8;
+                                break;
+                            case 4:
+                            case 5:
+                                b0 = 4;
+                        }
+                        world.setBlock(x, y, z, ModBlocks.clayStainedChiseled3, (shiftedMeta | b0), 0x2);
+                    } else if (meta < 16) {
+                        int shiftedMeta = meta & 3;
+                        byte b0 = 0;
+
+                        switch (side) {
+                            case 0:
+                            case 1:
+                                b0 = 0;
+                                break;
+                            case 2:
+                            case 3:
+                                b0 = 8;
+                                break;
+                            case 4:
+                            case 5:
+                                b0 = 4;
+                        }
+                        world.setBlock(x, y, z, ModBlocks.clayStainedChiseled4, (shiftedMeta | b0), 0x2);
                     }
-                    world.setBlock(x, y, z, ModBlocks.clayStainedChiseled4, (shiftedMeta | b0), 0x2);
+                } else if (id == ModBlocks.clayStained2) {
+                    if (meta < 1) {
+                        int shiftedMeta = meta & 3;
+                        byte b0 = 0;
+
+                        switch (side) {
+                            case 0:
+                            case 1:
+                                b0 = 0;
+                                break;
+                            case 2:
+                            case 3:
+                                b0 = 8;
+                                break;
+                            case 4:
+                            case 5:
+                                b0 = 4;
+                        }
+                        world.setBlock(x, y, z, ModBlocks.clayStainedChiseled5, (shiftedMeta | b0), 0x2);
+                    }
                 }
+                player.inventory.mainInventory[hasChisel].damageItem(1, player);
+                return true;
             }
-            else if(id == ModBlocks.clayStained2) {
-                if (meta < 1) {
-                    int shiftedMeta = meta & 3;
-                    byte b0 = 0;
-
-                    switch (side)
-                    {
-                        case 0:
-                        case 1:
-                            b0 = 0;
-                            break;
-                        case 2:
-                        case 3:
-                            b0 = 8;
-                            break;
-                        case 4:
-                        case 5:
-                            b0 = 4;
-                    }
-                    world.setBlock(x, y, z, ModBlocks.clayStainedChiseled5, (shiftedMeta | b0), 0x2);
-                }
-            }
-            player.inventory.mainInventory[hasChisel].damageItem(1, player);
         }
-
-        return true;
+        return false;
     }
 }
