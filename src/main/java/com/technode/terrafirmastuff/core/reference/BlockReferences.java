@@ -5,11 +5,14 @@ import com.technode.terrafirmastuff.core.ModBlocks;
 import com.technode.terrafirmastuff.core.utility.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.init.Blocks;
 
 public class BlockReferences extends ModBlocks
 {
     public static void blockReferences()
     {
+        Blocks.flower_pot.setCreativeTab(null);
+
         clayRaw = new BlockClayRaw(Material.clay) {}.setHardness(1F).setResistance(2.5F).setStepSound(Block.soundTypeGravel).setBlockName("RawClay");
         clayStained = new BlockClay(Material.rock) {}.setHardness(1F).setResistance(2.5F).setStepSound(Block.soundTypeStone).setBlockName("StainedClay");
         clayStained2 = new BlockClay2(Material.rock) {}.setHardness(1F).setResistance(2.5F).setStepSound(Block.soundTypeStone).setBlockName("StainedClay2");
@@ -31,7 +34,7 @@ public class BlockReferences extends ModBlocks
         clayStainedPillar3 = new BlockClayPillar3() {}.setHardness(1F).setResistance(2.5F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayPillar3");
         clayStainedPillar4 = new BlockClayPillar4() {}.setHardness(1F).setResistance(2.5F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayPillar4");
         clayStainedPillar5 = new BlockClayPillar5() {}.setHardness(1F).setResistance(2.5F).setStepSound(Block.soundTypeStone).setBlockName("StainedClayPillar5");
-
+        flowerPotColor = new BlockFlowerPotColor() {}.setHardness(0.0F).setStepSound(Block.soundTypeStone).setBlockName("FlowerPotColor").setBlockTextureName("flower_pot");
         registerBlocks();
 
         LogHelper.info("Finished Loading Blocks");

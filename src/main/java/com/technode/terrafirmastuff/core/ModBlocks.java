@@ -27,6 +27,7 @@ public class ModBlocks
     public static Block clayStainedPillar3;
     public static Block clayStainedPillar4;
     public static Block clayStainedPillar5;
+    public static Block flowerPotColor;
 
     public static void registerBlocks()
     {
@@ -51,6 +52,6 @@ public class ModBlocks
         GameRegistry.registerBlock(clayStainedPillar3, ItemBlockClayRotatable3.class, "clayStainedPillar3");
         GameRegistry.registerBlock(clayStainedPillar4, ItemBlockClayRotatable4.class, "clayStainedPillar4");
         GameRegistry.registerBlock(clayStainedPillar5, ItemBlockClayRotatable5.class, "clayStainedPillar5");
-
+        GameRegistry.registerBlock(flowerPotColor, ItemBlockFlowerPotColor.class, "FlowerPotColor");
     }
 }
