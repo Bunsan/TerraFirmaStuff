@@ -1,11 +1,7 @@
 package com.technode.terrafirmastuff;
 
-import com.technode.terrafirmastuff.core.ItemHeat;
-import com.technode.terrafirmastuff.core.Recipes;
-import com.technode.terrafirmastuff.core.ModDetails;
+import com.technode.terrafirmastuff.core.*;
 import com.technode.terrafirmastuff.core.proxy.CommonProxy;
-import com.technode.terrafirmastuff.core.reference.BlockReferences;
-import com.technode.terrafirmastuff.core.reference.ItemReferences;
 import com.technode.terrafirmastuff.handler.ConfigurationHandler;
 import com.technode.terrafirmastuff.core.utility.LogHelper;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -39,8 +35,8 @@ public class TerraFirmaStuff
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("Pre Initialization Complete");
 
-        ItemReferences.itemReferences();
-        BlockReferences.blockReferences();
+        ModItems.itemReferences();
+        ModBlocks.blockReferences();
     }
 
     @EventHandler

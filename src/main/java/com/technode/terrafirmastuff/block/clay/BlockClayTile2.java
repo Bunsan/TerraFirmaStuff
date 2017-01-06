@@ -7,9 +7,9 @@ import net.minecraft.util.IIcon;
 
 public class BlockClayTile2 extends BlockClayTile
 {
-    public BlockClayTile2(Material material)
+    public BlockClayTile2()
     {
-        super(Material.rock);
+        super();
         this.setCreativeTab(CreativeTab.TFS_TAB);
         names = new String[Reference.COLOURS.length-16];
         System.arraycopy(Reference.COLOURS, 16, names, 0, Reference.COLOURS.length-16);

@@ -1,5 +1,6 @@
 package com.technode.terrafirmastuff.block.clay;
 
+import com.technode.terrafirmastuff.block.BlockDecor;
 import com.technode.terrafirmastuff.core.ModDetails;
 import com.technode.terrafirmastuff.core.reference.CreativeTab;
 import com.technode.terrafirmastuff.core.reference.Reference;
@@ -7,9 +8,9 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
-public class BlockClayPaver extends BlockClayDecor {
+public class BlockClayPaver extends BlockDecor {
 
-    public BlockClayPaver(Material material)
+    public BlockClayPaver()
     {
         super(Material.rock);
         this.setCreativeTab(CreativeTab.TFS_TAB);

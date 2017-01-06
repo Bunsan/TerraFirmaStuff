@@ -2,6 +2,10 @@ package com.technode.terrafirmastuff.handler;
 
 
 
+import com.bioxx.tfc.Core.TFC_Core;
+import com.bioxx.tfc.Items.Pottery.ItemPotteryBase;
+import com.bioxx.tfc.api.TFCItems;
+import com.technode.terrafirmastuff.item.ItemClayBrick;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
 
@@ -25,11 +29,21 @@ public class CraftingHandler
             IInventory iinventory = e.craftMatrix;
 
             if (iinventory != null) {
-                // Tool Damaging
-              //  if (item == ModItems.smallMetalChunk) {
-                //    List<ItemStack> chisels = OreDictionary.getOres("itemChisel", false);
-                 //   handleItem(player, iinventory, chisels);
-                //}
+
+                if(!player.worldObj.isRemote && item instanceof ItemClayBrick)
+                {
+                    for (int i = 0; i < iinventory.getSizeInventory(); i++)
+                    {
+                        ItemStack is = iinventory.getStackInSlot(i);
+                        if (is == null)
+                            continue;
+                        else if (is.getItem() instanceof ItemPotteryBase)
+                        {
+                            TFC_Core.giveItemToPlayer(new ItemStack(TFCItems.ceramicMold, 1, 1), player);
+                            break;
+                        }
+                    }
+                }
             }
         }
 

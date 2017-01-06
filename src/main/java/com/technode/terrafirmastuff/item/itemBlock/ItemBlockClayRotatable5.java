@@ -8,7 +8,10 @@ public class ItemBlockClayRotatable5 extends ItemBlockBase
     public ItemBlockClayRotatable5(Block b)
     {
         super(b);
-        metaNames = new String[1];
+        metaNames = new String[16];
         System.arraycopy(Reference.COLOURS, 16, metaNames, 0, 1);
+        System.arraycopy(Reference.COLOURS, 16, metaNames, 4, 1);
+        System.arraycopy(Reference.COLOURS, 16, metaNames, 8, 1);
+        System.arraycopy(Reference.COLOURS, 16, metaNames, 12, 1);
     }
 }

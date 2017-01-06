@@ -34,4 +34,14 @@ public class Reference {
     public static final String[] CLAY_STYLES = {
             "Baked", "Paver", "Circle", "Brick", "Tile", "Pillar", "Chiseled"
     };
+
+    public static final String[] MINERALS = {
+            "Jet", "Serpentine", "Quartz"
+    };
+
+    /* Stone Types */
+    public static final String[] STONE_IGIN = {"Granite", "Diorite", "Gabbro"};
+    public static final String[] STONE_SED  = {"Shale", "Claystone", "RockSalt", "Limestone", "Conglomerate", "Dolomite", "Chert", "Chalk"};
+    public static final String[] STONE_IGEX = {"Rhyolite", "Basalt", "Andesite", "Dacite"};
+    public static final String[] STONE_MM   = {"Quartzite", "Slate", "Phyllite", "Schist", "Gneiss", "Marble"};
 }
