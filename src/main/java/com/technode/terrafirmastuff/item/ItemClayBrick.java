@@ -35,7 +35,7 @@ public class ItemClayBrick extends ItemTerra {
     @Override
     public void registerIcons(IIconRegister registerer) {
         for (int i = 0; i < metaNames.length; i++) {
-            icons[i] = registerer.registerIcon(ModDetails.ModID + ":" + "clay/" + getUnlocalizedName() + metaNames[i]);
+            icons[i] = registerer.registerIcon(ModDetails.ModID + ":" + "clay/" + getUnlocalizedName().replace("item.", "") + metaNames[i]);
         }
     }
 
