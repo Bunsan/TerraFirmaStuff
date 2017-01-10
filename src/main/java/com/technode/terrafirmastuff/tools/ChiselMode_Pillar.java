@@ -73,7 +73,8 @@ public class ChiselMode_Pillar extends ChiselMode {
     {
         if (world.getBlock(x, y, z) == ModBlocks.clayStained || world.getBlock(x, y, z) == ModBlocks.clayStained2 ||
                 world.getBlock(x, y, z) == TFCBlocks.stoneSed || world.getBlock(x, y, z) == TFCBlocks.stoneMM ||
-                world.getBlock(x, y, z) == TFCBlocks.stoneIgEx || world.getBlock(x, y, z) == TFCBlocks.stoneIgIn) {
+                world.getBlock(x, y, z) == TFCBlocks.stoneIgEx || world.getBlock(x, y, z) == TFCBlocks.stoneIgIn ||
+                world.getBlock(x, y, z) == ModBlocks.mineralBlock) {
             int hasChisel = hasChisel(player);
             if (hasChisel >= 0) {
                 if (id == ModBlocks.clayStained) {
@@ -285,6 +286,26 @@ public class ChiselMode_Pillar extends ChiselMode {
                                 b0 = 4;
                         }
                         world.setBlock(x, y, z, ModBlocks.stoneIgInPillar, (shiftedMeta | b0), 0x2);
+                    }
+                } else if (id == ModBlocks.mineralBlock) {
+                    if (meta < 4) {
+                        int shiftedMeta = meta & 3;
+                        byte b0 = 0;
+
+                        switch (side) {
+                            case 0:
+                            case 1:
+                                b0 = 0;
+                                break;
+                            case 2:
+                            case 3:
+                                b0 = 8;
+                                break;
+                            case 4:
+                            case 5:
+                                b0 = 4;
+                        }
+                        world.setBlock(x, y, z, ModBlocks.mineralPillar, (shiftedMeta | b0), 0x2);
                     }
                 }
                     player.inventory.mainInventory[hasChisel].damageItem(1, player);

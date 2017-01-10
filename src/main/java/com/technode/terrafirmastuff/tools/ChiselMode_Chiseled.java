@@ -70,7 +70,7 @@ public class ChiselMode_Chiseled extends ChiselMode {
     @Override
     public boolean onUsedHandler(World world, EntityPlayer player, int x, int y, int z, Block id, int meta, int side, float hitX, float hitY, float hitZ)
     {
-        if (world.getBlock(x, y, z) == ModBlocks.clayStained || world.getBlock(x, y, z) == ModBlocks.clayStained2) {
+        if (world.getBlock(x, y, z) == ModBlocks.clayStained || world.getBlock(x, y, z) == ModBlocks.clayStained2 || world.getBlock(x, y, z) == ModBlocks.mineralBlock) {
 
             int hasChisel = hasChisel(player);
             if (hasChisel >= 0) {
@@ -167,6 +167,26 @@ public class ChiselMode_Chiseled extends ChiselMode {
                                 b0 = 4;
                         }
                         world.setBlock(x, y, z, ModBlocks.clayStainedChiseled5, (shiftedMeta | b0), 0x2);
+                    }
+                } else if (id == ModBlocks.mineralBlock) {
+                    if (meta < 4) {
+                        int shiftedMeta = meta & 3;
+                        byte b0 = 0;
+
+                        switch (side) {
+                            case 0:
+                            case 1:
+                                b0 = 0;
+                                break;
+                            case 2:
+                            case 3:
+                                b0 = 8;
+                                break;
+                            case 4:
+                            case 5:
+                                b0 = 4;
+                        }
+                        world.setBlock(x, y, z, ModBlocks.mineralChiseled, (shiftedMeta | b0), 0x2);
                     }
                 }
                 player.inventory.mainInventory[hasChisel].damageItem(1, player);

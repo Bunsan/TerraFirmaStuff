@@ -1,6 +1,9 @@
 package com.technode.terrafirmastuff.core;
 
 import com.technode.terrafirmastuff.block.clay.*;
+import com.technode.terrafirmastuff.block.mineral.BlockMineral;
+import com.technode.terrafirmastuff.block.mineral.BlockMineralChiseled;
+import com.technode.terrafirmastuff.block.mineral.BlockMineralPillar;
 import com.technode.terrafirmastuff.block.stone.*;
 import com.technode.terrafirmastuff.core.utility.LogHelper;
 import com.technode.terrafirmastuff.item.itemBlock.*;
@@ -47,6 +50,10 @@ public class ModBlocks
     public static Block stoneIgInPillar;
     public static Block stoneIgExPillar;
 
+    public static Block mineralBlock;
+    public static Block mineralChiseled;
+    public static Block mineralPillar;
+
     public static void registerBlocks()
     {
         GameRegistry.registerBlock(clayRaw, ItemBlockClayRaw.class, "clayRaw");
@@ -87,6 +94,9 @@ public class ModBlocks
         GameRegistry.registerBlock(stoneIgInPillar, ItemBlockStoneIgInRotatable.class, "stoneIgInPillar");
         GameRegistry.registerBlock(stoneIgExPillar, ItemBlockStoneIgExRotatable.class, "stoneIgExPillar");
 
+        GameRegistry.registerBlock(mineralBlock, ItemBlockMineral.class, "mineralBlock");
+        GameRegistry.registerBlock(mineralChiseled, ItemBlockMineralRotatable.class, "mineralChiseled");
+        GameRegistry.registerBlock(mineralPillar, ItemBlockMineralRotatable.class, "mineralPillar");
     }
 
     public static void blockReferences()
@@ -128,6 +138,10 @@ public class ModBlocks
         stoneMMPillar2 = new BlockPillarMM2() {}.setHardness(6F).setResistance(40F).setStepSound(Block.soundTypeStone).setBlockName("StoneMMPillar2");
         stoneIgInPillar = new BlockPillarIgIn() {}.setHardness(6F).setResistance(40F).setStepSound(Block.soundTypeStone).setBlockName("StoneIgInPillar");
         stoneIgExPillar = new BlockPillarIgEx() {}.setHardness(6F).setResistance(40F).setStepSound(Block.soundTypeStone).setBlockName("StoneIgExPillar");
+
+        mineralBlock = new BlockMineral() {}.setHardness(3F).setResistance(20F).setStepSound(Block.soundTypeStone).setBlockName("MineralBlock");
+        mineralChiseled = new BlockMineralChiseled() {}.setHardness(3F).setResistance(20F).setStepSound(Block.soundTypeStone).setBlockName("MineralChiseled");
+        mineralPillar = new BlockMineralPillar() {}.setHardness(3F).setResistance(20F).setStepSound(Block.soundTypeStone).setBlockName("MineralPillar");
 
         registerBlocks();
 

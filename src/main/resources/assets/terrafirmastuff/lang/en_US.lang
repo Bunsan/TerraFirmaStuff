@@ -255,5 +255,15 @@ tile.StoneIgInPillar.Granite.name=Granite Pillar
 tile.StoneIgInPillar.Diorite.name=Diorite Pillar
 tile.StoneIgInPillar.Gabbro.name=Gabbro Pillar
 
+tile.MineralBlock.Jet.name=Jet Block
+tile.MineralChiseled.Jet.name=Chiseled Jet
+tile.MineralPillar.Jet.name=Jet Pillar
+tile.MineralBlock.Quartz.name=Jet Block
+tile.MineralChiseled.Quartz.name=Chiseled Jet
+tile.MineralPillar.Quartz.name=Jet Pillar
+tile.MineralBlock.Serpentine.name=Jet Block
+tile.MineralChiseled.Serpentine.name=Chiseled Jet
+tile.MineralPillar.Serpentine.name=Jet Pillar
+
 #== Creative Tabs ==
 itemGroup.terrafirmastuff=TerraFirmaStuff

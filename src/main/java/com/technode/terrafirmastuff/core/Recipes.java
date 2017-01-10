@@ -68,6 +68,9 @@ public class Recipes
                 GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.clayStainedTile, 1, i), " B ", "BMB", " B ", 'B', new ItemStack(ModItems.clayBrick, 1, i), 'M', new ItemStack(TFCItems.mortar)));
             }
 
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.mineralBlock, 4, 0), "MmM", "mMm", "MmM", 'M', new ItemStack(TFCItems.powder, 1, 10), 'm', new ItemStack(TFCItems.mortar)));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.mineralBlock, 4, 1), "MmM", "mMm", "MmM", 'M', new ItemStack(TFCItems.powder, 1, 11), 'm', new ItemStack(TFCItems.mortar)));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.mineralBlock, 4, 2), "MmM", "mMm", "MmM", 'M', new ItemStack(TFCItems.powder, 1, 12), 'm', new ItemStack(TFCItems.mortar)));
 
         // Dyes
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 2, 3), "dyeRed", "dyeGreen"));
