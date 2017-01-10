@@ -43,6 +43,10 @@ item.clayBrick.Red.name=Red Stained Brick
 item.clayBrick.Black.name=Black Stained Brick
 item.clayBrick.Base.name=Hardened Clay Brick
 
+item.powder.Jet Powder.name=Jet Powder
+item.powder.Serpentine Powder.name=Serpentine Powder
+item.powder.Quartz Powder.name=Quartz Powder
+
 #== Blocks ==
 
 tile.RawClay.name=Clay Block
@@ -258,12 +262,12 @@ tile.StoneIgInPillar.Gabbro.name=Gabbro Pillar
 tile.MineralBlock.Jet.name=Jet Block
 tile.MineralChiseled.Jet.name=Chiseled Jet
 tile.MineralPillar.Jet.name=Jet Pillar
-tile.MineralBlock.Quartz.name=Jet Block
-tile.MineralChiseled.Quartz.name=Chiseled Jet
-tile.MineralPillar.Quartz.name=Jet Pillar
-tile.MineralBlock.Serpentine.name=Jet Block
-tile.MineralChiseled.Serpentine.name=Chiseled Jet
-tile.MineralPillar.Serpentine.name=Jet Pillar
+tile.MineralBlock.Quartz.name=Quartz Block
+tile.MineralChiseled.Quartz.name=Chiseled Quartz
+tile.MineralPillar.Quartz.name=Quartz Pillar
+tile.MineralBlock.Serpentine.name=Serpentine Block
+tile.MineralChiseled.Serpentine.name=Chiseled Serpentine
+tile.MineralPillar.Serpentine.name=Serpentine Pillar
 
 #== Creative Tabs ==
 itemGroup.terrafirmastuff=TerraFirmaStuff

@@ -39,6 +39,10 @@ public class Reference {
             "Jet", "Serpentine", "Quartz"
     };
 
+    public static final String[] POWDER = {
+            "Jet Powder", "Serpentine Powder", "Quartz Powder"
+    };
+
     /* Stone Types */
     public static final String[] STONE_IGIN = {"Granite", "Diorite", "Gabbro"};
     public static final String[] STONE_SED  = {"Shale", "Claystone", "RockSalt", "Limestone", "Conglomerate", "Dolomite", "Chert", "Chalk"};

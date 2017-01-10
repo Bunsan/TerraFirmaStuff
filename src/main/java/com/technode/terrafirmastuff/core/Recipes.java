@@ -1,11 +1,14 @@
 package com.technode.terrafirmastuff.core;
 
 import com.bioxx.tfc.api.Constant.Global;
+import com.bioxx.tfc.api.Crafting.QuernManager;
+import com.bioxx.tfc.api.Crafting.QuernRecipe;
 import com.bioxx.tfc.api.TFCBlocks;
 import com.bioxx.tfc.api.TFCItems;
 
 import com.technode.terrafirmastuff.TerraFirmaStuff;
 import com.technode.terrafirmastuff.core.reference.Reference;
+import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
@@ -68,9 +71,9 @@ public class Recipes
                 GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.clayStainedTile, 1, i), " B ", "BMB", " B ", 'B', new ItemStack(ModItems.clayBrick, 1, i), 'M', new ItemStack(TFCItems.mortar)));
             }
 
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.mineralBlock, 4, 0), "MmM", "mMm", "MmM", 'M', new ItemStack(TFCItems.powder, 1, 10), 'm', new ItemStack(TFCItems.mortar)));
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.mineralBlock, 4, 1), "MmM", "mMm", "MmM", 'M', new ItemStack(TFCItems.powder, 1, 11), 'm', new ItemStack(TFCItems.mortar)));
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.mineralBlock, 4, 2), "MmM", "mMm", "MmM", 'M', new ItemStack(TFCItems.powder, 1, 12), 'm', new ItemStack(TFCItems.mortar)));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.mineralBlock, 4, 0), "MmM", "mMm", "MmM", 'M', new ItemStack(ModItems.powder, 1, 0), 'm', new ItemStack(TFCItems.mortar)));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.mineralBlock, 4, 1), "MmM", "mMm", "MmM", 'M', new ItemStack(ModItems.powder, 1, 1), 'm', new ItemStack(TFCItems.mortar)));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.mineralBlock, 4, 2), "MmM", "mMm", "MmM", 'M', new ItemStack(ModItems.powder, 1, 2), 'm', new ItemStack(TFCItems.mortar)));
 
         // Dyes
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 2, 3), "dyeRed", "dyeGreen"));
@@ -84,5 +87,15 @@ public class Recipes
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 4, 13), "dyeRed", "dyeRed", "dyeWhite", "dyeBlue"));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 3, 13), "dyeRed", "dyePink", "dyeBlue"));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 1, 14), "dyeRed", "dyeYellow"));
+
+        registerQuernRecipes();
+
+    }
+    private static void registerQuernRecipes() {
+        QuernManager manager = QuernManager.getInstance();
+
+        manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreMineralChunk, 1, 8), new ItemStack(ModItems.powder, 1, 0)));//Jet to Jet Powder
+        manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreMineralChunk, 1, 14), new ItemStack(ModItems.powder, 1, 1)));//Serpentine to Serepentine Powder
+        manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreMineralChunk, 1, 24), new ItemStack(ModItems.powder, 1, 2)));//Quartz to Quartz Powder
     }
 }
