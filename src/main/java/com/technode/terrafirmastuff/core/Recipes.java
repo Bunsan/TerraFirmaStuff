@@ -88,6 +88,17 @@ public class Recipes
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 3, 13), "dyeRed", "dyePink", "dyeBlue"));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 1, 14), "dyeRed", "dyeYellow"));
 
+        // Fences
+        for(int i = 0; i < Global.WOOD_ALL.length; i++) {
+            int l = i % 16;
+            if (i == l) {
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.fence, 2, i), "PSP", "PSP", "P P", 'S', "stickWood", 'P', new ItemStack(TFCItems.singlePlank, 1, i)));
+            }
+            else if(i/16 == 1)
+            {
+                GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.fence2, 2, l), "PSP", "PSP", "P P", 'S', "stickWood", 'P', new ItemStack(TFCItems.singlePlank, 1, i)));
+            }
+        }
         registerQuernRecipes();
 
     }
