@@ -6,8 +6,8 @@ public class ModDetails
     public static final String ModName = "TerraFirmaStuff";
 
     public static final int VersionMajor = 0;
-    public static final int VersionMinor = 1;
-    public static final int VersionRevision = 4;
+    public static final int VersionMinor = 2;
+    public static final int VersionRevision = 0;
 
     public static final String ModVersion = VersionMajor + "." + VersionMinor + "." + VersionRevision;
 
