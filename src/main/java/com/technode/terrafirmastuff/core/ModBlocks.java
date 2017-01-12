@@ -12,6 +12,7 @@ import com.technode.terrafirmastuff.item.itemBlock.*;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.init.Blocks;
 
 import static com.bioxx.tfc.api.TFCBlocks.fenceGate;
 import static com.bioxx.tfc.api.TFCBlocks.fenceGate2;
@@ -161,5 +162,10 @@ public class ModBlocks
         registerBlocks();
 
         LogHelper.info("Finished Loading Blocks");
+    }
+    public static void setupFire()
+    {
+        Blocks.fire.setFireInfo(fence, 5, 20);
+        Blocks.fire.setFireInfo(fence2, 5, 20);
     }
 }

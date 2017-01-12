@@ -269,5 +269,23 @@ tile.MineralBlock.Serpentine.name=Serpentine Block
 tile.MineralChiseled.Serpentine.name=Chiseled Serpentine
 tile.MineralPillar.Serpentine.name=Serpentine Pillar
 
+tile.Fence.Acacia.name=Acacia Fence
+tile.Fence.Ash.name=Ash Fence
+tile.Fence.Aspen.name=Aspen Fence
+tile.Fence.Birch.name=Birch Fence
+tile.Fence.Chestnut.name=Chestnut Fence
+tile.Fence.Douglas Fir.name=Douglas Fir Fence
+tile.Fence.Hickory.name=Hickory Fence
+tile.Fence.Kapok.name=Kapok Fence
+tile.Fence.Maple.name=Maple Fence
+tile.Fence.Oak.name=Oak Fence
+tile.Fence.Pine.name=Pine Fence
+tile.Fence.Sequoia.name=Sequoia Fence
+tile.Fence.Spruce.name=Spruce Fence
+tile.Fence.Sycamore.name=Sycamore Fence
+tile.Fence.White Cedar.name=White Cedar Fence
+tile.Fence.White Elm.name=White Elm Fence
+tile.Fence.Willow.name=Willow Fence
+
 #== Creative Tabs ==
 itemGroup.terrafirmastuff=TerraFirmaStuff

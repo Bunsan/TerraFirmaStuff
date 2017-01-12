@@ -37,6 +37,7 @@ public class TerraFirmaStuff
 
         ModItems.itemReferences();
         ModBlocks.blockReferences();
+        ModBlocks.setupFire();
     }
 
     @EventHandler
