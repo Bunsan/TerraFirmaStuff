@@ -3,13 +3,11 @@ package com.technode.terrafirmastuff.core;
 import com.bioxx.tfc.api.Constant.Global;
 import com.bioxx.tfc.api.Crafting.QuernManager;
 import com.bioxx.tfc.api.Crafting.QuernRecipe;
-import com.bioxx.tfc.api.TFCBlocks;
 import com.bioxx.tfc.api.TFCItems;
 
-import com.technode.terrafirmastuff.TerraFirmaStuff;
 import com.technode.terrafirmastuff.core.reference.Reference;
-import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Items;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
@@ -105,8 +103,8 @@ public class Recipes
     private static void registerQuernRecipes() {
         QuernManager manager = QuernManager.getInstance();
 
-        manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreMineralChunk, 1, 8), new ItemStack(ModItems.powder, 1, 0)));//Jet to Jet Powder
-        manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreMineralChunk, 1, 14), new ItemStack(ModItems.powder, 1, 1)));//Serpentine to Serepentine Powder
-        manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreMineralChunk, 1, 24), new ItemStack(ModItems.powder, 1, 2)));//Quartz to Quartz Powder
+        manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreChunk, 1, 24), new ItemStack(ModItems.powder, 1, 0)));//Jet to Jet Powder
+        manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreChunk, 1, 30), new ItemStack(ModItems.powder, 1, 1)));//Serpentine to Serepentine Powder
+        manager.addRecipe(new QuernRecipe(new ItemStack(Items.quartz, 1), new ItemStack(ModItems.powder, 1, 2)));//Quartz to Quartz Powder
     }
 }
