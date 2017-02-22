@@ -1,5 +1,6 @@
 package com.technode.terrafirmastuff.tools;
 
+import com.bioxx.tfc.Core.TFC_Core;
 import com.bioxx.tfc.api.TFCBlocks;
 import com.bioxx.tfc.api.Tools.ChiselMode;
 import com.technode.terrafirmastuff.block.BlockBase;
@@ -71,6 +72,10 @@ public class ChiselMode_Pillar extends ChiselMode {
     @Override
     public boolean onUsedHandler(World world, EntityPlayer player, int x, int y, int z, Block id, int meta, int side, float hitX, float hitY, float hitZ)
     {
+        if(TFC_Core.isNaturalStone(world.getBlock(x, y, z)) && TFC_Core.isNaturalStone(world.getBlock(x, y + 1, z)) && TFC_Core.isNaturalStone(world.getBlock(x, y+2, z))) {
+            return false;
+        }
+
         if (world.getBlock(x, y, z) == ModBlocks.clayStained || world.getBlock(x, y, z) == ModBlocks.clayStained2 ||
                 world.getBlock(x, y, z) == TFCBlocks.stoneSed || world.getBlock(x, y, z) == TFCBlocks.stoneMM ||
                 world.getBlock(x, y, z) == TFCBlocks.stoneIgEx || world.getBlock(x, y, z) == TFCBlocks.stoneIgIn ||
