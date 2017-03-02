@@ -8,6 +8,7 @@ import com.bioxx.tfc.api.TFCItems;
 import com.technode.terrafirmastuff.core.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Items;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
@@ -73,6 +74,9 @@ public class Recipes
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.mineralBlock, 4, 1), "MmM", "mMm", "MmM", 'M', new ItemStack(ModItems.powder, 1, 1), 'm', new ItemStack(TFCItems.mortar)));
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.mineralBlock, 4, 2), "MmM", "mMm", "MmM", 'M', new ItemStack(ModItems.powder, 1, 2), 'm', new ItemStack(TFCItems.mortar)));
 
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.stickBundle), "stickWood", "stickWood", "stickWood", "stickWood", "stickWood", "stickWood", "stickWood", "stickWood", "stickWood"));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.stick, 9, 0), new ItemStack(ModItems.stickBundle)));
+
         // Dyes
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 2, 3), "dyeRed", "dyeGreen"));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 2, 5), "dyeRed", "dyeBlue"));
@@ -97,6 +101,24 @@ public class Recipes
                 GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.fence2, 2, l), "PSP", "PSP", "P P", 'S', "stickWood", 'P', new ItemStack(TFCItems.singlePlank, 1, i)));
             }
         }
+
+        // Furnace
+        for(int i = 0; i < 16; i++) {
+            ItemStack input = new ItemStack((ModBlocks.clayRawColor), 1, i);
+            ItemStack output = new ItemStack((ModBlocks.clayStained), 1, i);
+
+            FurnaceRecipes.smelting().func_151394_a(input, output, 0.0F);
+        }
+        for(int i = 0; i < 17; i++)
+        {
+            ItemStack input2 = new ItemStack((ModItems.clayRawBrick), 1, i);
+            ItemStack output2 = new ItemStack((ModItems.clayBrick), 1, i);
+
+            FurnaceRecipes.smelting().func_151394_a(input2, output2, 0.0F);
+        }
+
+        FurnaceRecipes.smelting().func_151394_a(new ItemStack(ModBlocks.clayRaw, 1, 0), new ItemStack(ModBlocks.clayStained2, 1), 0.0F);
+
         registerQuernRecipes();
 
     }

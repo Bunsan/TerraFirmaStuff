@@ -54,6 +54,7 @@ public class TerraFirmaStuff
         proxy.registerChiselModes();
 
         ItemHeat.setupItemHeat();
+        ModItems.registerFurnaceFuel();
 
         proxy.hideNEIItems();
     }
