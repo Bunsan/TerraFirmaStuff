@@ -5,6 +5,8 @@ package com.technode.terrafirmastuff.handler;
 import com.bioxx.tfc.Core.TFC_Core;
 import com.bioxx.tfc.Items.Pottery.ItemPotteryBase;
 import com.bioxx.tfc.api.TFCItems;
+import com.technode.terrafirmastuff.core.ModBlocks;
+import com.technode.terrafirmastuff.core.ModItems;
 import com.technode.terrafirmastuff.item.ItemClayBrick;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
@@ -15,10 +17,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import java.util.List;
+import java.util.Random;
 
 public class CraftingHandler
 {
-        @SubscribeEvent
+    private Random rand = new Random();
+
+    @SubscribeEvent
         public void onCrafting (PlayerEvent.ItemCraftedEvent e)
         //(EntityPlayer player, ItemStack itemstack, IInventory iinventory)
         {
@@ -41,6 +46,21 @@ public class CraftingHandler
                         {
                             TFC_Core.giveItemToPlayer(new ItemStack(TFCItems.ceramicMold, 1, 1), player);
                             break;
+                        }
+                    }
+                }
+                if(!player.worldObj.isRemote && item == ModItems.stickBunch)
+                {
+                    for (int i = 0; i < iinventory.getSizeInventory(); i++)
+                    {
+                        ItemStack is = iinventory.getStackInSlot(i);
+                        if (is == null)
+                            continue;
+                        else if (is.getItem() == Item.getItemFromBlock(ModBlocks.stickBundle))
+                        {
+                            if(rand.nextInt(2) == 0) {
+                                TFC_Core.giveItemToPlayer(new ItemStack(ModItems.twine, 1, 0), player);
+                            }
                         }
                     }
                 }

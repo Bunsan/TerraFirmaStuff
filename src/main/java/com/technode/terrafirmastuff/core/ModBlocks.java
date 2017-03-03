@@ -7,15 +7,13 @@ import com.technode.terrafirmastuff.block.mineral.BlockMineralPillar;
 import com.technode.terrafirmastuff.block.stone.*;
 import com.technode.terrafirmastuff.block.wood.BlockFence;
 import com.technode.terrafirmastuff.block.wood.BlockFence2;
+import com.technode.terrafirmastuff.block.wood.BlockStickBundle;
 import com.technode.terrafirmastuff.core.utility.LogHelper;
 import com.technode.terrafirmastuff.item.itemBlock.*;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
-
-import static com.bioxx.tfc.api.TFCBlocks.fenceGate;
-import static com.bioxx.tfc.api.TFCBlocks.fenceGate2;
 
 public class ModBlocks
 {
@@ -63,6 +61,9 @@ public class ModBlocks
     public static Block fence;
     public static Block fence2;
 
+    public static Block stickBundle;
+
+    public static int stickBundleID;
 
     public static void registerBlocks()
     {
@@ -110,6 +111,8 @@ public class ModBlocks
 
         GameRegistry.registerBlock(fence, ItemFence.class, "Fence");
         GameRegistry.registerBlock(fence2, ItemFence2.class, "Fence2");
+
+        GameRegistry.registerBlock(stickBundle, "StickBundle");
     }
 
     public static void blockReferences()
@@ -159,6 +162,8 @@ public class ModBlocks
         fence = new BlockFence("Fence", Material.wood).setBlockName("Fence").setHardness(2);
         fence2 = new BlockFence2("Fence2", Material.wood).setBlockName("Fence").setHardness(2);
 
+        stickBundle = new BlockStickBundle().setHardness(0.5F).setResistance(1.0F).setBlockName("StickBundle");
+
         registerBlocks();
 
         LogHelper.info("Finished Loading Blocks");
@@ -167,5 +172,6 @@ public class ModBlocks
     {
         Blocks.fire.setFireInfo(fence, 5, 20);
         Blocks.fire.setFireInfo(fence2, 5, 20);
+        Blocks.fire.setFireInfo(stickBundle, 5, 20);
     }
 }

@@ -47,7 +47,9 @@ item.powder.Jet Powder.name=Jet Powder
 item.powder.Serpentine Powder.name=Serpentine Powder
 item.powder.Quartz Powder.name=Quartz Powder
 
-item.stickBundle.name=Bundle of Sticks
+item.stickBunch.name=Bunch of Sticks
+item.twine.name=Twine
+tile.StickBundle.name=Bundle of Sticks
 
 #== Blocks ==
 

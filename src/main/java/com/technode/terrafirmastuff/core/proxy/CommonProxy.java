@@ -14,4 +14,9 @@ public abstract class CommonProxy
 
     }
     public void hideNEIItems() {}
+
+    public void registerRenderInformation()
+    {
+        // NOOP on server
+    }
 }
