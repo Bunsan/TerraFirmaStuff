@@ -74,8 +74,10 @@ public class Recipes
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.mineralBlock, 4, 1), "MmM", "mMm", "MmM", 'M', new ItemStack(ModItems.powder, 1, 1), 'm', new ItemStack(TFCItems.mortar)));
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.mineralBlock, 4, 2), "MmM", "mMm", "MmM", 'M', new ItemStack(ModItems.powder, 1, 2), 'm', new ItemStack(TFCItems.mortar)));
 
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.stickBundle), "stickWood", "stickWood", "stickWood", "stickWood", "stickWood", "stickWood", "stickWood", "stickWood", "stickWood"));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.stick, 9, 0), new ItemStack(ModItems.stickBundle)));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.stickBunch), "stickWood", "stickWood", "stickWood", "stickWood", "stickWood", "stickWood", "stickWood", "stickWood", "stickWood"));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.stick, 9, 0), new ItemStack(ModItems.stickBunch)));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.stickBundle), "SSS", "SJS", "SSS", 'S', new ItemStack(ModItems.stickBunch), 'J', new ItemStack(ModItems.twine)));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.stickBunch, 8, 0), new ItemStack(ModBlocks.stickBundle), "itemKnife"));
 
         // Dyes
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 2, 3), "dyeRed", "dyeGreen"));
@@ -89,6 +91,9 @@ public class Recipes
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 4, 13), "dyeRed", "dyeRed", "dyeWhite", "dyeBlue"));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 3, 13), "dyeRed", "dyePink", "dyeBlue"));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 1, 14), "dyeRed", "dyeYellow"));
+
+        //Twine
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.twine, 2), new ItemStack(TFCItems.juteFiber), new ItemStack(TFCItems.spindle, 1, WILD)));
 
         // Fences
         for(int i = 0; i < Global.WOOD_ALL.length; i++) {

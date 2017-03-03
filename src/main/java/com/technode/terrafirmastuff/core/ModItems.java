@@ -15,14 +15,16 @@ public class ModItems
     public static Item clayRawBrick;
     public static Item clayBrick;
     public static Item powder;
-    public static Item stickBundle;
+    public static Item stickBunch;
+    public static Item twine;
 
     public static void registerItems()
     {
         GameRegistry.registerItem(clayRawBrick, clayRawBrick.getUnlocalizedName());
         GameRegistry.registerItem(clayBrick, clayBrick.getUnlocalizedName());
         GameRegistry.registerItem(powder, powder.getUnlocalizedName());
-        GameRegistry.registerItem(stickBundle, stickBundle.getUnlocalizedName());
+        GameRegistry.registerItem(stickBunch, stickBunch.getUnlocalizedName());
+        GameRegistry.registerItem(twine, twine.getUnlocalizedName());
     }
 
     public static void itemReferences()
@@ -30,7 +32,8 @@ public class ModItems
         clayRawBrick = new ItemClayBrick().setUnlocalizedName("clayRawBrick");
         clayBrick = new ItemClayBrick().setUnlocalizedName("clayBrick");
         powder = new ItemBase().setMetaNames(Reference.POWDER).setUnlocalizedName("powder").setCreativeTab(CreativeTab.TFS_TAB);
-        stickBundle = new ItemBase().setUnlocalizedName("stickBundle").setCreativeTab(CreativeTab.TFS_TAB).setTextureName("stickBundle");
+        stickBunch = new ItemBase().setUnlocalizedName("stickBunch").setCreativeTab(CreativeTab.TFS_TAB).setTextureName("stickBunch");
+        twine = new ItemBase().setUnlocalizedName("twine").setCreativeTab(CreativeTab.TFS_TAB).setTextureName("twine");
 
         registerItems();
 
@@ -39,6 +42,7 @@ public class ModItems
 
     public static void registerFurnaceFuel()
     {
-        TFCFuelHandler.registerFuel(stickBundle, 900);
+        TFCFuelHandler.registerFuel(stickBunch, 900);
+        TFCFuelHandler.registerFuel(Item.getItemFromBlock(ModBlocks.stickBundle), 7200);
     }
 }
