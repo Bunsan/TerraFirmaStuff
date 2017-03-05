@@ -2,6 +2,7 @@ package com.technode.terrafirmastuff.block;
 
 import com.bioxx.tfc.Core.TFC_Core;
 import com.bioxx.tfc.api.TFCOptions;
+import com.technode.terrafirmastuff.core.utility.LogHelper;
 import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -32,6 +33,8 @@ public abstract class BlockRotatableBase extends BlockRotatedPillar
         if(TFCOptions.enableDebugMode && world.isRemote)
         {
             int metadata = world.getBlockMetadata(x, y, z);
+            LogHelper.info("Meta = " + (new StringBuilder()).append(getUnlocalizedName()).append(":").append(metadata).toString());
+
         }
         return false;
     }
