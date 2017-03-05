@@ -10,11 +10,11 @@ import com.technode.terrafirmastuff.core.ModItems;
 import com.technode.terrafirmastuff.item.ItemClayBrick;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.List;
 import java.util.Random;
@@ -35,7 +35,7 @@ public class CraftingHandler
 
             if (iinventory != null) {
 
-                if(!player.worldObj.isRemote && item instanceof ItemClayBrick)
+                if(item instanceof ItemClayBrick)
                 {
                     for (int i = 0; i < iinventory.getSizeInventory(); i++)
                     {
@@ -49,8 +49,10 @@ public class CraftingHandler
                         }
                     }
                 }
-                if(!player.worldObj.isRemote && item == ModItems.stickBunch)
+                else if(item == ModItems.stickBunch)
                 {
+                    List<ItemStack> knives = OreDictionary.getOres("itemKnife", false);
+                    handleItem(player, iinventory, knives);
                     for (int i = 0; i < iinventory.getSizeInventory(); i++)
                     {
                         ItemStack is = iinventory.getStackInSlot(i);
@@ -64,8 +66,23 @@ public class CraftingHandler
                         }
                     }
                 }
+                else if(item == ModItems.twine)
+                {
+                    handleItem(player, iinventory, com.bioxx.tfc.Core.Recipes.spindle);
+                }
             }
         }
+
+    public static void handleItem(EntityPlayer entityplayer, IInventory iinventory, Item[] items)
+    {
+        for(int i = 0; i < iinventory.getSizeInventory(); i++)
+        {
+            if(iinventory.getStackInSlot(i) == null)
+                continue;
+            for(int j = 0; j < items.length; j++)
+                damageItem(entityplayer, iinventory, i, items[j]);
+        }
+    }
 
     public static void handleItem(EntityPlayer entityplayer, IInventory iinventory, List<ItemStack> items)
     {
