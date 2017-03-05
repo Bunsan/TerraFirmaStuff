@@ -35,6 +35,7 @@ public class TerraFirmaStuff
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("Pre Initialization Complete");
 
+        proxy.registerTileEntities(true);
         ModItems.itemReferences();
         ModBlocks.blockReferences();
         ModBlocks.setupFire();
@@ -56,6 +57,7 @@ public class TerraFirmaStuff
         ItemHeat.setupItemHeat();
         ModItems.registerFurnaceFuel();
 
+        proxy.registerWailaClasses();
         proxy.hideNEIItems();
     }
 

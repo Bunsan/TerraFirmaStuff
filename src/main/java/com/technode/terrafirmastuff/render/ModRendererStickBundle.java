@@ -1,6 +1,5 @@
 package com.technode.terrafirmastuff.render;
 
-import com.bioxx.tfc.api.TFCBlocks;
 import com.technode.terrafirmastuff.block.wood.BlockStickBundle;
 import com.technode.terrafirmastuff.core.ModBlocks;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
@@ -27,11 +26,6 @@ public class ModRendererStickBundle implements ISimpleBlockRenderingHandler
         if (modelID == ModBlocks.stickBundleID)
         {
             renderer.setRenderBounds(0.25f, 0.25f, 0f, 0.75f, 0.75f, 1f);
-            renderInvBlock(block, renderer);
-        }
-        else if (modelID == TFCBlocks.woodSupportRenderIdV)
-        {
-            renderer.setRenderBounds(0.25f, 0f, 0.25f, 0.75f, 1f, 0.75f);
             renderInvBlock(block, renderer);
         }
         renderer.clearOverrideBlockTexture();

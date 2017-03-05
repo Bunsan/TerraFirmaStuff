@@ -3,6 +3,7 @@ package com.technode.terrafirmastuff.core.proxy;
 import com.technode.terrafirmastuff.core.ModBlocks;
 import com.technode.terrafirmastuff.core.compat.NEIIntegration;
 import com.technode.terrafirmastuff.render.ModRendererStickBundle;
+import com.technode.terrafirmastuff.render.RenderOilLampMod;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.relauncher.Side;
@@ -14,7 +15,9 @@ public class ClientProxy extends CommonProxy
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerRenderInformation() {
-    		RenderingRegistry.registerBlockHandler(ModBlocks.stickBundleID = RenderingRegistry.getNextAvailableRenderId(), new ModRendererStickBundle());
+    public void registerRenderInformation()
+    {
+        RenderingRegistry.registerBlockHandler(ModBlocks.stickBundleID = RenderingRegistry.getNextAvailableRenderId(), new ModRendererStickBundle());
+        RenderingRegistry.registerBlockHandler(ModBlocks.oilLampModRenderId = RenderingRegistry.getNextAvailableRenderId(), new RenderOilLampMod());
     }
 }

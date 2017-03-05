@@ -1,6 +1,10 @@
 package com.technode.terrafirmastuff.core;
 
 import com.technode.terrafirmastuff.block.clay.*;
+import com.technode.terrafirmastuff.block.metal.BlockOilLampMod;
+import com.technode.terrafirmastuff.block.metal.BlockOilLampMod2;
+import com.technode.terrafirmastuff.block.metal.BlockOilLampMod3;
+import com.technode.terrafirmastuff.block.metal.BlockOilLampMod4;
 import com.technode.terrafirmastuff.block.mineral.BlockMineral;
 import com.technode.terrafirmastuff.block.mineral.BlockMineralChiseled;
 import com.technode.terrafirmastuff.block.mineral.BlockMineralPillar;
@@ -63,7 +67,14 @@ public class ModBlocks
 
     public static Block stickBundle;
 
+    public static Block oilLampMod;
+    public static Block oilLampMod2;
+    public static Block oilLampMod3;
+    public static Block oilLampMod4;
+
     public static int stickBundleID;
+    public static int oilLampModRenderId;
+
 
     public static void registerBlocks()
     {
@@ -113,6 +124,12 @@ public class ModBlocks
         GameRegistry.registerBlock(fence2, ItemFence2.class, "Fence2");
 
         GameRegistry.registerBlock(stickBundle, "StickBundle");
+
+        GameRegistry.registerBlock(oilLampMod, ItemOilLampMod.class, "OilLampMod");
+        GameRegistry.registerBlock(oilLampMod2, ItemOilLampMod2.class, "OilLampMod2");
+        GameRegistry.registerBlock(oilLampMod3, ItemOilLampMod3.class, "OilLampMod3");
+        GameRegistry.registerBlock(oilLampMod4, ItemOilLampMod4.class, "OilLampMod4");
+
     }
 
     public static void blockReferences()
@@ -163,6 +180,11 @@ public class ModBlocks
         fence2 = new BlockFence2("Fence2", Material.wood).setBlockName("Fence").setHardness(2);
 
         stickBundle = new BlockStickBundle().setHardness(0.5F).setResistance(1.0F).setBlockName("StickBundle");
+
+        oilLampMod = new BlockOilLampMod().setHardness(1F).setBlockName("OilLampMod");
+        oilLampMod2 = new BlockOilLampMod2().setHardness(1F).setBlockName("OilLampMod");
+        oilLampMod3 = new BlockOilLampMod3().setHardness(1F).setBlockName("OilLampMod");
+        oilLampMod4 = new BlockOilLampMod4().setHardness(1F).setBlockName("OilLampMod");
 
         registerBlocks();
 

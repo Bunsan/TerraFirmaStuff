@@ -291,5 +291,29 @@ tile.Fence.White Cedar.name=White Cedar Fence
 tile.Fence.White Elm.name=White Elm Fence
 tile.Fence.Willow.name=Willow Fence
 
+#== Lamp ==
+
+tile.OilLampMod.BismuthBronze.name=Bismuth Bronze Oil Lamp
+tile.OilLampMod.BlackBronze.name=Black Bronze Oil Lamp
+tile.OilLampMod.BlackSteel.name=Black Steel Oil Lamp
+tile.OilLampMod.Brass.name=Brass Oil Lamp
+tile.OilLampMod.Bronze.name=Bronze Oil Lamp
+tile.OilLampMod.RedSteel.name=Red Steel Oil Lamp
+tile.OilLampMod.Bismuth.name=Bismuth Oil Lamp
+tile.OilLampMod.Copper.name=Copper Oil Lamp
+tile.OilLampMod.WroughtIron.name=Wrought Iron Oil Lamp
+tile.OilLampMod.Lead.name=Lead Oil Lamp
+tile.OilLampMod.Nickel.name=Nickel Oil Lamp
+tile.OilLampMod.Unknown.name=Please Ignore
+tile.OilLampMod.PigIron.name=Pig Iron Oil Lamp
+tile.OilLampMod.Steel.name=Steel Oil Lamp
+tile.OilLampMod.Tin.name=Tin Oil Lamp
+tile.OilLampMod.Zinc.name=Zinc Oil Lamp
+tile.OilLampMod.Electrum.name=Electrum Oil Lamp
+tile.OilLampMod.Cupronickel.name=Cupronickel Oil Lamp
+tile.OilLampMod.Osmium.name=Osmium Oil Lamp
+tile.OilLampMod.Aluminum.name=Aluminum Oil Lamp
+tile.OilLampMod.Tungsten.name=Tungsten Oil Lamp
+
 #== Creative Tabs ==
 itemGroup.terrafirmastuff=TerraFirmaStuff

@@ -1,17 +1,18 @@
 package com.technode.terrafirmastuff.core;
 
 import com.bioxx.tfc.api.Constant.Global;
-import com.bioxx.tfc.api.Crafting.QuernManager;
-import com.bioxx.tfc.api.Crafting.QuernRecipe;
+import com.bioxx.tfc.api.Crafting.*;
 import com.bioxx.tfc.api.TFCItems;
-
 import com.technode.terrafirmastuff.core.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
+
+import java.util.Random;
 
 public class Recipes
 {
@@ -132,5 +133,52 @@ public class Recipes
         manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreMineralChunk, 1, 14), new ItemStack(ModItems.powder, 1, 1)));//Serpentine to Serepentine Powder
         manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreMineralChunk, 1, 24), new ItemStack(ModItems.powder, 1, 2)));//Quartz to Quartz Powder
     }
+    public static void registerAnvilRecipes(Random r, World world) {
+        AnvilManager manager = AnvilManager.getInstance();
+        //We need to set the world ref so that all anvil recipes can generate correctly
+        AnvilManager.world = world;
 
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.bismuthBronzeIngot), null,"oillamp", AnvilReq.BRONZE,
+                new ItemStack(ModBlocks.oilLampMod, 1, 0)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.blackBronzeIngot), null,"oillamp", AnvilReq.BRONZE,
+                new ItemStack(ModBlocks.oilLampMod, 1, 1)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.blackSteelIngot), null,"oillamp", AnvilReq.BLACKSTEEL,
+                new ItemStack(ModBlocks.oilLampMod, 1, 2)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.brassIngot), null,"oillamp", AnvilReq.BRONZE,
+                new ItemStack(ModBlocks.oilLampMod, 1, 3)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.bronzeIngot), null,"oillamp", AnvilReq.BRONZE,
+                new ItemStack(ModBlocks.oilLampMod, 1, 4)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.redSteelIngot), null,"oillamp", AnvilReq.REDSTEEL,
+                new ItemStack(ModBlocks.oilLampMod, 1, 5)));
+
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.bismuthIngot), null,"oillamp", AnvilReq.COPPER,
+                new ItemStack(ModBlocks.oilLampMod2, 1, 0)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.copperIngot), null,"oillamp", AnvilReq.COPPER,
+                new ItemStack(ModBlocks.oilLampMod2, 1, 1)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.wroughtIronIngot), null,"oillamp", AnvilReq.WROUGHTIRON,
+                new ItemStack(ModBlocks.oilLampMod2, 1, 2)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.leadIngot), null,"oillamp", AnvilReq.BRONZE,
+                new ItemStack(ModBlocks.oilLampMod2, 1, 3)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.nickelIngot), null,"oillamp", AnvilReq.STEEL,
+                new ItemStack(ModBlocks.oilLampMod2, 1, 4)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.pigIronIngot), null,"oillamp", AnvilReq.WROUGHTIRON,
+                new ItemStack(ModBlocks.oilLampMod3, 1, 0)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.steelIngot), null,"oillamp", AnvilReq.STEEL,
+                new ItemStack(ModBlocks.oilLampMod3, 1, 1)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.tinIngot), null,"oillamp", AnvilReq.COPPER,
+                new ItemStack(ModBlocks.oilLampMod3, 1, 2)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.zincIngot), null,"oillamp", AnvilReq.COPPER,
+                new ItemStack(ModBlocks.oilLampMod3, 1, 3)));
+
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.electrumIngot), null,"oillamp", AnvilReq.BRONZE,
+                new ItemStack(ModBlocks.oilLampMod4, 1, 0)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.cupronickelIngot), null,"oillamp", AnvilReq.BRONZE,
+                new ItemStack(ModBlocks.oilLampMod4, 1, 1)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.osmiumIngot), null,"oillamp", AnvilReq.BLUESTEEL,
+                new ItemStack(ModBlocks.oilLampMod4, 1, 2)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.aluminumIngot), null,"oillamp", AnvilReq.BRONZE,
+                new ItemStack(ModBlocks.oilLampMod4, 1, 3)));
+        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.tungstenIngot), null,"oillamp", AnvilReq.STEEL,
+                new ItemStack(ModBlocks.oilLampMod4, 1, 4)));
+    }
 }
