@@ -5,6 +5,7 @@ import com.bioxx.tfc.api.Crafting.*;
 import com.bioxx.tfc.api.TFCItems;
 import com.technode.terrafirmastuff.core.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.world.World;
@@ -79,7 +80,7 @@ public class Recipes
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.stickBunch, 8, 0), new ItemStack(ModBlocks.stickBundle), "itemKnife"));
 
         // Dyes
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 2, 3), "dyeRed", new ItemStack(TFCItems.seedsGreenbean)));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 2, 3), "dyeRed", "dyeGreen"));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 2, 5), "dyeRed", "dyeBlue"));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 2, 6), "dyeBlue", "dyeGreen"));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 3, 7), "dyeWhite", "dyeWhite", "dyeBlack"));
@@ -129,9 +130,9 @@ public class Recipes
     private static void registerQuernRecipes() {
         QuernManager manager = QuernManager.getInstance();
 
-        manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreMineralChunk, 1, 8), new ItemStack(ModItems.powder, 1, 0)));//Jet to Jet Powder
-        manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreMineralChunk, 1, 14), new ItemStack(ModItems.powder, 1, 1)));//Serpentine to Serepentine Powder
-        manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreMineralChunk, 1, 24), new ItemStack(ModItems.powder, 1, 2)));//Quartz to Quartz Powder
+        manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreChunk, 1, 24), new ItemStack(ModItems.powder, 1, 0)));//Jet to Jet Powder
+        manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreChunk, 1, 30), new ItemStack(ModItems.powder, 1, 1)));//Serpentine to Serepentine Powder
+        manager.addRecipe(new QuernRecipe(new ItemStack(Items.quartz, 1), new ItemStack(ModItems.powder, 1, 2)));//Quartz to Quartz Powder
     }
     public static void registerAnvilRecipes(Random r, World world) {
         AnvilManager manager = AnvilManager.getInstance();
@@ -169,16 +170,5 @@ public class Recipes
                 new ItemStack(ModBlocks.oilLampMod3, 1, 2)));
         manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.zincIngot), null,"oillamp", AnvilReq.COPPER,
                 new ItemStack(ModBlocks.oilLampMod3, 1, 3)));
-
-        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.electrumIngot), null,"oillamp", AnvilReq.BRONZE,
-                new ItemStack(ModBlocks.oilLampMod4, 1, 0)));
-        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.cupronickelIngot), null,"oillamp", AnvilReq.BRONZE,
-                new ItemStack(ModBlocks.oilLampMod4, 1, 1)));
-        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.osmiumIngot), null,"oillamp", AnvilReq.BLUESTEEL,
-                new ItemStack(ModBlocks.oilLampMod4, 1, 2)));
-        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.aluminumIngot), null,"oillamp", AnvilReq.BRONZE,
-                new ItemStack(ModBlocks.oilLampMod4, 1, 3)));
-        manager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.tungstenIngot), null,"oillamp", AnvilReq.STEEL,
-                new ItemStack(ModBlocks.oilLampMod4, 1, 4)));
     }
 }

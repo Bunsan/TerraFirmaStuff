@@ -5,7 +5,6 @@ import com.bioxx.tfc.api.TFCFluids;
 import com.bioxx.tfc.api.TFCOptions;
 import com.bioxx.tfc.api.Util.Helper;
 import com.technode.terrafirmastuff.core.ModBlocks;
-import com.technode.terrafirmastuff.core.utility.LogHelper;
 import com.technode.terrafirmastuff.tileentity.TEOilLampMod;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
@@ -96,14 +95,6 @@ public class WAILADataMod implements IWailaDataProvider {
             if ((meta & 8) != 0)
                 meta -= 8;
             itemstack = new ItemStack(ModBlocks.oilLampMod3, 1, meta);
-            return itemstack;
-        }
-        else if (accessor.getBlock() == ModBlocks.oilLampMod4)
-        {
-            if ((meta & 8) != 0)
-                meta -= 8;
-            itemstack = new ItemStack(ModBlocks.oilLampMod4, 1, meta);
-            LogHelper.info(meta + " " + itemstack);
             return itemstack;
         }
         return null;

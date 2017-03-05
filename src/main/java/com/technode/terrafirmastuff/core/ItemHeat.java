@@ -34,11 +34,6 @@ public class ItemHeat
         HeatRaw sterlingSilverRaw = new HeatRaw(0.35, 900);//sh = 0.72F; boil = 2212; melt = 893;
         HeatRaw tinRaw = new HeatRaw(0.14, 230);
         HeatRaw zincRaw = new HeatRaw(0.21, 420);//sh = 0.66F; boil = 907; melt = 420;
-        HeatRaw osmiumRaw = new HeatRaw(0.35, 2200); //actual is 3027
-        HeatRaw aluminumRaw = new HeatRaw(0.35, 980);
-        HeatRaw tungstenRaw = new HeatRaw(0.35, 2200); //actual is 3422
-        HeatRaw electrumRaw = new HeatRaw(0.55, 1060);
-        HeatRaw cupronickelRaw = new HeatRaw(0.48, 1453);
 
         for(int i = 0; i < 16; i++) {
             ItemStack input = new ItemStack((ModBlocks.clayRawColor), 1, i);
@@ -71,15 +66,8 @@ public class ItemHeat
         manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod2, 1, 4), nickelRaw, null));
 
         manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod3, 1, 0), pigIronRaw, null));
-        manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod4, 1, 1), steelRaw, null));
+        manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod3, 1, 1), steelRaw, null));
         manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod3, 1, 2), tinRaw, null));
         manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod3, 1, 3), zincRaw, null));
-
-
-        manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod4, 1, 0), electrumRaw, null));
-        manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod4, 1, 1), cupronickelRaw, null));
-        manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod4, 1, 2), osmiumRaw, null));
-        manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod4, 1, 3), aluminumRaw, null));
-        manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod4, 1, 4), tungstenRaw, null));
     }
 }
