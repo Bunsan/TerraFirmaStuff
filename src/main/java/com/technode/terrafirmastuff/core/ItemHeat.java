@@ -71,7 +71,7 @@ public class ItemHeat
         manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod2, 1, 4), nickelRaw, null));
 
         manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod3, 1, 0), pigIronRaw, null));
-        manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod4, 1, 1), steelRaw, null));
+        manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod3, 1, 1), steelRaw, null));
         manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod3, 1, 2), tinRaw, null));
         manager.addIndex(new HeatIndex(new ItemStack(ModBlocks.oilLampMod3, 1, 3), zincRaw, null));
 
