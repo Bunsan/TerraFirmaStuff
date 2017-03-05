@@ -18,6 +18,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 
+import static com.bioxx.tfc.api.TFCBlocks.fenceGate;
+import static com.bioxx.tfc.api.TFCBlocks.fenceGate2;
+
 public class ModBlocks
 {
     public static Block clayRaw;
@@ -191,5 +194,14 @@ public class ModBlocks
         Blocks.fire.setFireInfo(fence, 5, 20);
         Blocks.fire.setFireInfo(fence2, 5, 20);
         Blocks.fire.setFireInfo(stickBundle, 5, 20);
+    }
+    public static boolean isBlockAFence(Block block)
+    {
+        return block == fence || block == fence2 || net.minecraft.block.BlockFence.func_149825_a(block) || block instanceof net.minecraft.block.BlockFence;
+    }
+
+    public static boolean canFenceConnectTo(Block block)
+    {
+        return isBlockAFence(block) || block == fenceGate || block == fenceGate2;
     }
 }
