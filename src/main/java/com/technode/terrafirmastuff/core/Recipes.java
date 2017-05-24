@@ -12,7 +12,9 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
-import java.util.Random;
+import java.util.List;
+
+import static com.technode.terrafirmastuff.core.ModBlocks.oilLampMod;
 
 public class Recipes
 {
@@ -133,7 +135,14 @@ public class Recipes
         manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreMineralChunk, 1, 14), new ItemStack(ModItems.powder, 1, 1)));//Serpentine to Serepentine Powder
         manager.addRecipe(new QuernRecipe(new ItemStack(TFCItems.oreMineralChunk, 1, 24), new ItemStack(ModItems.powder, 1, 2)));//Quartz to Quartz Powder
     }
-    public static void registerAnvilRecipes(Random r, World world) {
+
+    public static boolean areAnvilRecipesRegistered() {
+        List list = AnvilManager.getInstance().getRecipeList();
+
+        return list.contains(oilLampMod);
+    }
+
+    public static void registerAnvilRecipes(World world) {
         AnvilManager manager = AnvilManager.getInstance();
         //We need to set the world ref so that all anvil recipes can generate correctly
         AnvilManager.world = world;

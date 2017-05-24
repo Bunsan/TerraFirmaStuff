@@ -2,8 +2,9 @@ package com.technode.terrafirmastuff;
 
 import com.technode.terrafirmastuff.core.*;
 import com.technode.terrafirmastuff.core.proxy.CommonProxy;
-import com.technode.terrafirmastuff.handler.ConfigurationHandler;
 import com.technode.terrafirmastuff.core.utility.LogHelper;
+import com.technode.terrafirmastuff.handler.ChunkEventHandler;
+import com.technode.terrafirmastuff.handler.ConfigurationHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -12,6 +13,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = ModDetails.ModID, name = ModDetails.ModName, version = ModDetails.ModVersion, guiFactory = ModDetails.GUI_FACTORY_CLASS)
 
@@ -49,6 +51,9 @@ public class TerraFirmaStuff
         // Register Crafting Handler
         FMLCommonHandler.instance().bus().register(new com.technode.terrafirmastuff.handler.CraftingHandler());
         FMLCommonHandler.instance().bus().register(instance);
+
+        // Register the Chunk Load/Save Handler
+        MinecraftForge.EVENT_BUS.register(new ChunkEventHandler());
 
         Recipes.registerRecipes();
 
